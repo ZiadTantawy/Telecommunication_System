@@ -67,17 +67,34 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Login.aspx" />
+    <Content Include="AdminPage1\AllCustomerProfiles.aspx" />
+    <Content Include="CustomerPage1\CostumerDashboard.aspx" />
+    <Content Include="LoginPage.aspx" />
     <Content Include="Milestone 2 implementation -Final.sql" />
+    <Content Include="Test data.sql" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
+    <Compile Include="AdminPage1\AllCustomerProfiles.aspx.cs">
+      <DependentUpon>AllCustomerProfiles.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Login.aspx.designer.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
+    <Compile Include="AdminPage1\AllCustomerProfiles.aspx.designer.cs">
+      <DependentUpon>AllCustomerProfiles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerPage1\CostumerDashboard.aspx.cs">
+      <DependentUpon>CostumerDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerPage1\CostumerDashboard.aspx.designer.cs">
+      <DependentUpon>CostumerDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPage.aspx.cs">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginPage.aspx.designer.cs">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -89,6 +106,11 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AdminPage2\" />
+    <Folder Include="CustomerPage2\" />
+    <Folder Include="CustomerPage3\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
