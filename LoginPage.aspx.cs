@@ -48,7 +48,7 @@ namespace Telecommunication_System
                         {
                             Response.Write("redirect");
                             // Redirect to user dashboard or another page on successful login
-                            Response.Redirect("CustomerPage1/CostumerDashboard.aspx"); // Replace with actual user page
+                            Response.Redirect("CostumerDashboard.aspx"); // Replace with actual user page
                         }
                     }
                 }

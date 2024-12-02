@@ -67,14 +67,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AdminDashboard.aspx" />
     <Content Include="AdminPage1\AllCustomerProfiles.aspx" />
-    <Content Include="CustomerPage1\CostumerDashboard.aspx" />
+    <Content Include="CostumerDashboard.aspx" />
     <Content Include="LoginPage.aspx" />
     <Content Include="Milestone 2 implementation -Final.sql" />
     <Content Include="Test data.sql" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminDashboard.aspx.cs">
+      <DependentUpon>AdminDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminDashboard.aspx.designer.cs">
+      <DependentUpon>AdminDashboard.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AdminPage1\AllCustomerProfiles.aspx.cs">
       <DependentUpon>AllCustomerProfiles.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -82,11 +90,11 @@
     <Compile Include="AdminPage1\AllCustomerProfiles.aspx.designer.cs">
       <DependentUpon>AllCustomerProfiles.aspx</DependentUpon>
     </Compile>
-    <Compile Include="CustomerPage1\CostumerDashboard.aspx.cs">
+    <Compile Include="CostumerDashboard.aspx.cs">
       <DependentUpon>CostumerDashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="CustomerPage1\CostumerDashboard.aspx.designer.cs">
+    <Compile Include="CostumerDashboard.aspx.designer.cs">
       <DependentUpon>CostumerDashboard.aspx</DependentUpon>
     </Compile>
     <Compile Include="LoginPage.aspx.cs">
@@ -109,6 +117,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="AdminPage2\" />
+    <Folder Include="CustomerPage1\" />
     <Folder Include="CustomerPage2\" />
     <Folder Include="CustomerPage3\" />
   </ItemGroup>
