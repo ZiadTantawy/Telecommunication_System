@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CostumerDashboard.aspx.cs" Inherits="Telecommunication_System.CustomerPage1.CostumerDashboard" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdminDashboard.aspx.cs" Inherits="Telecommunication_System.AdminDashboard" %>
 
 <!DOCTYPE html>
 
@@ -9,8 +9,6 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <h1>Helloo
-            </h1>
         </div>
     </form>
 </body>

@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Telecommunication_System.CustomerPage1
+namespace Telecommunication_System
 {
 
 
-    public partial class CostumerDashboard
+    public partial class AdminDashboard
     {
 
         /// <summary>

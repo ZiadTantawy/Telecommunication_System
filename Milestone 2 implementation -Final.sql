@@ -1,5 +1,6 @@
 ﻿--create database Telecom_Team_104
 
+
 use  Telecom_Team_104
 
 

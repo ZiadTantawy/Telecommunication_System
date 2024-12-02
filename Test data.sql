@@ -3,7 +3,7 @@
 --TODO : Try dropAllProceduresFunctionsViews
 
 --Customer Profile
-INSERT INTO Customer_Profile (nationalID, first_name, last_name, email, address, date_of_birth)
+INSERT INTO customer_profile (nationalID, first_name, last_name, email, address, date_of_birth)
 VALUES 
 (1, 'John', 'Doe', 'john.doe@example.com', '123 Main St', '1990-05-15'),
 (2, 'Jane', 'Smith', 'jane.smith@example.com', '456 Elm St', '1985-10-22'),
@@ -15,7 +15,7 @@ VALUES
 
 
 --Customer Account
-INSERT INTO Customer_Account (mobileNo, pass, balance, account_type, start_date, status, point, nationalID)
+INSERT INTO customer_account (mobileNo, pass, balance, account_type, start_date, status, point, nationalID)
 VALUES 
 ('12345678901', 'pass123', 50.0, 'Prepaid', '2022-01-01', 'active', 1000, 1),
 ('23456789012', 'pass234', 75.5, 'Post Paid', '2021-06-15', 'active', 2000, 2),
@@ -24,7 +24,7 @@ VALUES
 ('56789012345', 'pass567', 15.0, 'Post Paid', '2021-09-20', 'onhold', 250, 5);
 
 --Service Plan
-INSERT INTO Service_Plan (SMS_offered, minutes_offered, data_offered, name, price, description)
+INSERT INTO Service_plan (SMS_offered, minutes_offered, data_offered, name, price, description)
 VALUES 
 (100, 500, 5, 'Basic Plan', 20, 'Affordable basic plan'),
 (200, 1000, 10, 'Standard Plan', 50, 'Popular mid-tier plan'),
@@ -76,8 +76,9 @@ VALUES
 (15.00, 'USD', '2023-06-05', 5, '56789012345');
 
 
+
 --Transfer Money
-INSERT INTO Transfer_Money (walletID1, walletID2, amount, transfer_date)
+INSERT INTO transfer_money (walletID1, walletID2, amount, transfer_date)
 VALUES
 (1, 2, 15.00, '2023-06-10'),
 (2, 3, 10.00, '2023-06-12'),
@@ -97,7 +98,7 @@ VALUES
 
 
 --Points Group
-INSERT INTO Points_Group (benefitID, pointsAmount, PaymentID)
+INSERT INTO Points_group (benefitID, pointsAmount, PaymentID)
 VALUES
 (1, 10, 1),
 (2, 20, 2),
@@ -107,7 +108,7 @@ VALUES
 
 
 --Exclusive Offer
-INSERT INTO Exclusive_Offer (benefitID, internet_offered, SMS_offered, minutes_offered)
+INSERT INTO Exclusive_offer (benefitID, internet_offered, SMS_offered, minutes_offered)
 VALUES
 (1, 500, 50, 0),
 (2, 1000, 0, 100),
@@ -127,7 +128,7 @@ VALUES
 
 
 --Plan Provides Benefits
-INSERT INTO Plan_Provides_Benefits (benefitID, planID)
+INSERT INTO plan_provides_benefits (benefitID, planID)
 VALUES
 (1, 1),
 (2, 2),
@@ -137,7 +138,7 @@ VALUES
 
 
 --Shop
-INSERT INTO Shop (name, category)
+INSERT INTO shop (name, category)
 VALUES
 ('Tech World', 'Electronics'),
 ('Grocery Galore', 'Food'),
@@ -146,7 +147,7 @@ VALUES
 ('Home Comforts', 'Furniture');
 
 --Physical Shop
-INSERT INTO Physical_Shop (shopID, address, working_hours)
+INSERT INTO Physical_shop (shopID, address, working_hours)
 VALUES
 (1, '123 Mall St', '9 AM - 9 PM'),
 (2, '456 Market Ln', '8 AM - 8 PM'),
@@ -157,7 +158,7 @@ VALUES
 
 
 --E-shop
-INSERT INTO E_Shop (shopID,URL, rating)
+INSERT INTO E_shop (shopID,URL, rating)
 VALUES
 (1, 'www.techworld.com', 5),
 (2, 'www.grocerygalore.com', 4),
@@ -177,7 +178,7 @@ VALUES
 
 
 --Technical Support Ticket
-INSERT INTO Techincal_Support_Ticket (mobileNo, Issue_description, priority_level, status)
+INSERT INTO Technical_support_ticket (mobileNo, Issue_description, priority_level, status)
 VALUES
 ('12345678901', 'Unable to access account', 1, 'Open'),
 ('23456789012', 'Payment not processed', 2, 'In Progress'),

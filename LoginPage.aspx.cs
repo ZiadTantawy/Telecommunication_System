@@ -55,7 +55,7 @@ namespace Telecommunication_System
             }
             catch (Exception ex)
             {
-                Response.Write("error");
+                Response.Write(ex.Message);
             }
         }
     }
