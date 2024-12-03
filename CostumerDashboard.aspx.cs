@@ -13,5 +13,20 @@ namespace Telecommunication_System
         {
 
         }
+        protected void btnViewAllShops_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("CustomerContent3/AllShops.aspx");
+        }
+        protected void btnViewServicePlansPast5Month(object sender, EventArgs e)
+        {
+            Response.Redirect("CustomerContent3/Last5MonthSub.aspx");
+        }
+
+        protected void btnRenewSubscription (object sender, EventArgs e)
+        {
+            Response.Redirect("CustomerContent3/RenewSubscription.aspx");
+        }
+        
+
     }
 }

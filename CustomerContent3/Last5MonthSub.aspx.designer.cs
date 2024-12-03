@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Telecommunication_System
+namespace Telecommunication_System.CustomerContent3
 {
 
 
-    public partial class CostumerDashboard
+    public partial class Last5MonthSub
     {
 
         /// <summary>
@@ -24,30 +24,21 @@ namespace Telecommunication_System
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// btnViewAllShops control.
+        /// lblMessage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnViewAllShops;
+        protected global::System.Web.UI.WebControls.Label lblMessage;
 
         /// <summary>
-        /// btnServicePlansPast5Month control.
+        /// GridViewServicePlans control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnServicePlansPast5Month;
-
-        /// <summary>
-        /// RenewSubscription control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button RenewSubscription;
+        protected global::System.Web.UI.WebControls.GridView GridViewServicePlans;
     }
 }

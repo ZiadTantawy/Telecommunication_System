@@ -16,6 +16,8 @@ namespace Telecommunication_System
             string mobileNumber = txtMobileNumber.Text.Trim();
             string password = txtPassword.Text;
 
+            Session["MobileNumber"] = mobileNumber;
+
             // Admin login logic
             if (mobileNumber == "admin" && password == "admin")
             {
@@ -31,7 +33,7 @@ namespace Telecommunication_System
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
-                    Response.Write("connect");
+                
 
                     // Call your stored SQL function for user validation
                     using (SqlCommand cmd = new SqlCommand("SELECT dbo.AccountLoginValidation(@mobile_num, @pass)", conn))
@@ -42,11 +44,11 @@ namespace Telecommunication_System
                         // Execute the function and get the result
                         var result = cmd.ExecuteScalar();
                         conn.Close();
-                        Response.Write(result.ToString());
+                      
                         // Check if the result is 1 (valid login)
                         if (result != null && result.ToString() == "True")
                         {
-                            Response.Write("redirect");
+                            
                             // Redirect to user dashboard or another page on successful login
                             Response.Redirect("CostumerDashboard.aspx"); // Replace with actual user page
                         }
@@ -55,7 +57,7 @@ namespace Telecommunication_System
             }
             catch (Exception ex)
             {
-                Response.Write(ex.Message);
+                Response.Write("An error has occured");
             }
         }
     }
