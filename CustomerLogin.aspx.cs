@@ -18,13 +18,6 @@ namespace Telecommunication_System
 
             Session["MobileNumber"] = mobileNumber;
 
-            // Admin login logic
-            if (mobileNumber == "admin" && password == "admin")
-            {
-                Response.Redirect("AdminPage1.aspx");
-                return;
-            }
-
             // Database login logic
             string connectionString = WebConfigurationManager.ConnectionStrings["Telecom_Team_104"].ConnectionString;
 
@@ -50,7 +43,7 @@ namespace Telecommunication_System
                         {
                             
                             // Redirect to user dashboard or another page on successful login
-                            Response.Redirect("CostumerDashboard.aspx"); // Replace with actual user page
+                            Response.Redirect("CustomerPage3/CostumerDashboard.aspx"); // Replace with actual user page
                         }
                     }
                 }
