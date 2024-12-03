@@ -15,7 +15,8 @@
     <AssemblyName>Telecommunication_System</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
-    <Use64BitIISExpress>false</Use64BitIISExpress>
+    <Use64BitIISExpress>
+    </Use64BitIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -67,66 +68,74 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AdminDashboard.aspx" />
-    <Content Include="AdminPage1\AllCustomerProfiles.aspx" />
-    <Content Include="CostumerDashboard.aspx" />
-    <Content Include="CustomerContent3\AllShops.aspx" />
-    <Content Include="CustomerContent3\Last5MonthSub.aspx" />
-    <Content Include="CustomerContent3\RenewSubscription.aspx" />
-    <Content Include="LoginPage.aspx" />
+    <Content Include="AdminLogin.aspx" />
+    <Content Include="AdminPage1\AdminDashboard1.aspx" />
+    <Content Include="CustomerPage3\CostumerDashboard.aspx" />
+    <Content Include="CustomerPage3\AllShops.aspx" />
+    <Content Include="CustomerPage3\Last5MonthSub.aspx" />
+    <Content Include="CustomerPage3\RenewSubscription.aspx" />
+    <Content Include="CustomerLogin.aspx" />
+    <Content Include="HomePage.aspx" />
     <Content Include="Milestone 2 implementation -Final.sql" />
     <Content Include="Test data.sql" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminDashboard.aspx.cs">
-      <DependentUpon>AdminDashboard.aspx</DependentUpon>
+    <Compile Include="AdminLogin.aspx.cs">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AdminDashboard.aspx.designer.cs">
-      <DependentUpon>AdminDashboard.aspx</DependentUpon>
+    <Compile Include="AdminLogin.aspx.designer.cs">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AdminPage1\AllCustomerProfiles.aspx.cs">
-      <DependentUpon>AllCustomerProfiles.aspx</DependentUpon>
+    <Compile Include="AdminPage1\AdminDashboard1.aspx.cs">
+      <DependentUpon>AdminDashboard1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AdminPage1\AllCustomerProfiles.aspx.designer.cs">
-      <DependentUpon>AllCustomerProfiles.aspx</DependentUpon>
+    <Compile Include="AdminPage1\AdminDashboard1.aspx.designer.cs">
+      <DependentUpon>AdminDashboard1.aspx</DependentUpon>
     </Compile>
-    <Compile Include="CostumerDashboard.aspx.cs">
+    <Compile Include="CustomerPage3\CostumerDashboard.aspx.cs">
       <DependentUpon>CostumerDashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="CostumerDashboard.aspx.designer.cs">
+    <Compile Include="CustomerPage3\CostumerDashboard.aspx.designer.cs">
       <DependentUpon>CostumerDashboard.aspx</DependentUpon>
     </Compile>
-    <Compile Include="CustomerContent3\AllShops.aspx.cs">
+    <Compile Include="CustomerPage3\AllShops.aspx.cs">
       <DependentUpon>AllShops.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="CustomerContent3\AllShops.aspx.designer.cs">
+    <Compile Include="CustomerPage3\AllShops.aspx.designer.cs">
       <DependentUpon>AllShops.aspx</DependentUpon>
     </Compile>
-    <Compile Include="CustomerContent3\Last5MonthSub.aspx.cs">
+    <Compile Include="CustomerPage3\Last5MonthSub.aspx.cs">
       <DependentUpon>Last5MonthSub.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="CustomerContent3\Last5MonthSub.aspx.designer.cs">
+    <Compile Include="CustomerPage3\Last5MonthSub.aspx.designer.cs">
       <DependentUpon>Last5MonthSub.aspx</DependentUpon>
     </Compile>
-    <Compile Include="CustomerContent3\RenewSubscription.aspx.cs">
+    <Compile Include="CustomerPage3\RenewSubscription.aspx.cs">
       <DependentUpon>RenewSubscription.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="CustomerContent3\RenewSubscription.aspx.designer.cs">
+    <Compile Include="CustomerPage3\RenewSubscription.aspx.designer.cs">
       <DependentUpon>RenewSubscription.aspx</DependentUpon>
     </Compile>
-    <Compile Include="LoginPage.aspx.cs">
-      <DependentUpon>LoginPage.aspx</DependentUpon>
+    <Compile Include="CustomerLogin.aspx.cs">
+      <DependentUpon>CustomerLogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="LoginPage.aspx.designer.cs">
-      <DependentUpon>LoginPage.aspx</DependentUpon>
+    <Compile Include="CustomerLogin.aspx.designer.cs">
+      <DependentUpon>CustomerLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HomePage.aspx.cs">
+      <DependentUpon>HomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomePage.aspx.designer.cs">
+      <DependentUpon>HomePage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
