@@ -70,6 +70,9 @@
     <Content Include="AdminDashboard.aspx" />
     <Content Include="AdminPage1\AllCustomerProfiles.aspx" />
     <Content Include="CostumerDashboard.aspx" />
+    <Content Include="CustomerContent3\AllShops.aspx" />
+    <Content Include="CustomerContent3\Last5MonthSub.aspx" />
+    <Content Include="CustomerContent3\RenewSubscription.aspx" />
     <Content Include="LoginPage.aspx" />
     <Content Include="Milestone 2 implementation -Final.sql" />
     <Content Include="Test data.sql" />
@@ -97,6 +100,27 @@
     <Compile Include="CostumerDashboard.aspx.designer.cs">
       <DependentUpon>CostumerDashboard.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CustomerContent3\AllShops.aspx.cs">
+      <DependentUpon>AllShops.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerContent3\AllShops.aspx.designer.cs">
+      <DependentUpon>AllShops.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerContent3\Last5MonthSub.aspx.cs">
+      <DependentUpon>Last5MonthSub.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerContent3\Last5MonthSub.aspx.designer.cs">
+      <DependentUpon>Last5MonthSub.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerContent3\RenewSubscription.aspx.cs">
+      <DependentUpon>RenewSubscription.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerContent3\RenewSubscription.aspx.designer.cs">
+      <DependentUpon>RenewSubscription.aspx</DependentUpon>
+    </Compile>
     <Compile Include="LoginPage.aspx.cs">
       <DependentUpon>LoginPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -119,7 +143,6 @@
     <Folder Include="AdminPage2\" />
     <Folder Include="CustomerPage1\" />
     <Folder Include="CustomerPage2\" />
-    <Folder Include="CustomerPage3\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

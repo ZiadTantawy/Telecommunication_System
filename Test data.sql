@@ -43,7 +43,9 @@ VALUES
 ('45678901234', 4, '2023-04-10', 'active'),
 ('56789012345', 5, '2023-05-05', 'onhold');
 
-
+INSERT INTO Subscription (mobileNo, planID, subscription_date, status)
+VALUES 
+('12345678901', 5, '2024-07-07', 'active')
 --Plan Usage
 INSERT INTO Plan_Usage (start_date, end_date, data_consumption, minutes_used, SMS_sent, mobileNo, planID)
 VALUES 
