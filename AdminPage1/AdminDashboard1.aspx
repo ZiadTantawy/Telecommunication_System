@@ -1,23 +1,54 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdminDashboard1.aspx.cs" Inherits="Telecommunication_System.AdminPage1.AdminDashboard1" %>
 
 <!DOCTYPE html>
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Admin Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+        }
+
+        .dashboard-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            margin: 5px 0;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+            text-align: left;
+        }
+
+        .dashboard-button:hover {
+            background-color: #45a049;
+        }
+
+        .dashboard-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    </style>
 </head>
 <body>
     <h1>Admin Dashboard</h1>
     <form id="form1" runat="server">
-        <div>
-            <asp:Button ID="Button1" runat="server" Text="View All Customer Profiles" /><br />
-            <asp:Button ID="Button2" runat="server" Text="View All Physical Stores" /><br />
-            <asp:Button ID="Button3" runat="server" Text="View All Resolved Tickets" /><br />
-            <asp:Button ID="Button4" runat="server" Text="View All Customer Accounts & Subscriptions" /><br />
-            <asp:Button ID="Button5" runat="server" Text="Show Customer Accounts subscribed to the input plan id on a certain input date" /><br />
-            <asp:Button ID="Button6" runat="server" Text=" total usage of the input account on each subscribed plan from a given input date" /><br />
-            <asp:Button ID="Button7" runat="server" Text="Remove All benefits from Account" /><br />
-            <asp:Button ID="Button8" runat="server" Text="View All SMS offers for account" />
+        <div class="dashboard-container">
+            <asp:Button ID="btnCustomerProfiles" runat="server" Text="View Customer Profiles" CssClass="dashboard-button" OnClick="btnCustomerProfiles_Click" /><br />
+            <asp:Button ID="btnPhysicalStores" runat="server" Text="View Physical Stores" CssClass="dashboard-button" OnClick="btnPhysicalStores_Click" /><br />
+            <asp:Button ID="btnResolvedTickets" runat="server" Text="View Resolved Tickets" CssClass="dashboard-button" OnClick="btnResolvedTickets_Click" /><br />
+            <asp:Button ID="btnCustomerAccounts" runat="server" Text="View Customer Accounts & Subscriptions" CssClass="dashboard-button" OnClick="btnCustomerAccounts_Click" /><br />
+            <asp:Button ID="btnAccountsByPlan" runat="server" Text="Show Accounts Subscribed to Plan on Date" CssClass="dashboard-button" OnClick="btnAccountsByPlan_Click" /><br />
+            <asp:Button ID="btnAccountUsage" runat="server" Text="Show Account Usage per Plan on Date" CssClass="dashboard-button" OnClick="btnAccountUsage_Click" /><br />
+            <asp:Button ID="btnRemoveBenefits" runat="server" Text="Remove All Benefits from Account" CssClass="dashboard-button" OnClick="btnRemoveBenefits_Click" /><br />
+            <asp:Button ID="btnSmsOffers" runat="server" Text="View All SMS Offers for Account" CssClass="dashboard-button" OnClick="btnSmsOffers_Click" />
         </div>
     </form>
 </body>
