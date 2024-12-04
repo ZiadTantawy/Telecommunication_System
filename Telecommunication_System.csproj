@@ -67,13 +67,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AdminDashboard.aspx" />
-    <Content Include="AdminPage1\AllCustomerProfiles.aspx" />
-    <Content Include="CostumerDashboard.aspx" />
-    <Content Include="CustomerContent3\AllShops.aspx" />
-    <Content Include="CustomerContent3\Last5MonthSub.aspx" />
-    <Content Include="CustomerContent3\RenewSubscription.aspx" />
-    <Content Include="LoginPage.aspx" />
+    <Content Include="AdminLogin.aspx" />
+    <Content Include="AdminPage1\AdminDashboard1.aspx" />
+    <Content Include="AdminPage1\AllResolvedTickets.aspx" />
+    <Content Include="AdminPage1\CustomerProfilesView.aspx" />
+    <Content Include="AdminPage1\PhysicalStoresView.aspx" />
+    <Content Include="CustomerPage3\CostumerDashboard.aspx" />
+    <Content Include="CustomerPage3\AllShops.aspx" />
+    <Content Include="CustomerPage3\Last5MonthSub.aspx" />
+    <Content Include="CustomerPage3\RenewSubscription.aspx" />
+    <Content Include="CustomerLogin.aspx" />
+    <Content Include="HomePage.aspx" />
     <Content Include="Milestone 2 implementation -Final.sql" />
     <Content Include="Test data.sql" />
     <Content Include="Web.config" />
@@ -92,6 +96,27 @@
     </Compile>
     <Compile Include="AdminPage1\AllCustomerProfiles.aspx.designer.cs">
       <DependentUpon>AllCustomerProfiles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPage1\AllResolvedTickets.aspx.cs">
+      <DependentUpon>AllResolvedTickets.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPage1\AllResolvedTickets.aspx.designer.cs">
+      <DependentUpon>AllResolvedTickets.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPage1\CustomerProfilesView.aspx.cs">
+      <DependentUpon>CustomerProfilesView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPage1\CustomerProfilesView.aspx.designer.cs">
+      <DependentUpon>CustomerProfilesView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPage1\PhysicalStoresView.aspx.cs">
+      <DependentUpon>PhysicalStoresView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPage1\PhysicalStoresView.aspx.designer.cs">
+      <DependentUpon>PhysicalStoresView.aspx</DependentUpon>
     </Compile>
     <Compile Include="CustomerPage3\CostumerDashboard.aspx.cs">
       <DependentUpon>CostumerDashboard.aspx</DependentUpon>
