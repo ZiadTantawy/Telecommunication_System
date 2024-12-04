@@ -7,7 +7,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Telecommunication_System.CustomerContent3
+namespace Telecommunication_System.CustomerPage3
 {
     public partial class Last5MonthSub : System.Web.UI.Page
     {

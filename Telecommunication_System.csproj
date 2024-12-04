@@ -88,6 +88,9 @@
     <Content Include="CustomerPage3\CostumerDashboard.aspx" />
     <Content Include="CustomerPage3\AllShops.aspx" />
     <Content Include="CustomerPage3\Last5MonthSub.aspx" />
+    <Content Include="CustomerPage3\PaymentCashback.aspx" />
+    <Content Include="CustomerPage3\RechargeBalance.aspx" />
+    <Content Include="CustomerPage3\RedeemVoucher.aspx" />
     <Content Include="CustomerPage3\RenewSubscription.aspx" />
     <Content Include="CustomerLogin.aspx" />
     <Content Include="HomePage.aspx" />
