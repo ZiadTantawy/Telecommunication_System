@@ -8,7 +8,46 @@
 </head>
 <body>
     <form id="form1" runat="server">
+    <h1>Renew Sevice Plan</h1>
         <div>
+Enter Payment Amount
+            <br />
+<asp:TextBox 
+     ID="PaymentAmount" 
+     runat="server" 
+     Placeholder="Amount">
+</asp:TextBox>
+            <br />
+Choose Payment Method
+            <br />
+<asp:RadioButton 
+ID="rbtnCash" 
+runat="server" 
+GroupName="PaymentMethod" 
+Text="Cash" 
+Checked="true" />
+
+<asp:RadioButton 
+ID="rbtnCredit" 
+runat="server" 
+GroupName="PaymentMethod" 
+Text="Credit" />
+<br />
+Enter Plan ID
+            <br />
+ <asp:TextBox 
+     ID="PlanID" 
+     runat="server" 
+     Placeholder="Plan ID">
+ </asp:TextBox>
+            <br />
+<asp:Button 
+    ID="btnRenew" 
+    runat="server" 
+    Text="Renew" 
+    OnClick="Renew" />
+            <br />
+<asp:Label ID="lblMessage" runat="server"></asp:Label>
         </div>
     </form>
 </body>
