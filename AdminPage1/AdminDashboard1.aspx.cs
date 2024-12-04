@@ -30,17 +30,17 @@ namespace Telecommunication_System.AdminPage1
 
         protected void btnCustomerAccounts_Click(object sender, EventArgs e)
         {
-            Response.Redirect("CustomerAccountsSubscriptionsPage.aspx");
+            Response.Redirect("CustomerAccountSubscriptionsPage.aspx");
         }
 
         protected void btnAccountsByPlan_Click(object sender, EventArgs e)
         {
-            Response.Redirect("CustomerAccountsByPlanPage.aspx");
+            Response.Redirect("CustomerAccountsPlanDate.aspx");
         }
 
         protected void btnAccountUsage_Click(object sender, EventArgs e)
         {
-            Response.Redirect("AccountUsagePage.aspx");
+            Response.Redirect("CustomerUsagePage.aspx");
         }
 
         protected void btnRemoveBenefits_Click(object sender, EventArgs e)

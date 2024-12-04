@@ -11,7 +11,7 @@ namespace Telecommunication_System.AdminPage1
 {
 
 
-    public partial class AdminDashboard1
+    public partial class AccountSMSOffers
     {
 
         /// <summary>
@@ -24,75 +24,48 @@ namespace Telecommunication_System.AdminPage1
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// btnCustomerProfiles control.
+        /// txtMobileNumber control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCustomerProfiles;
+        protected global::System.Web.UI.WebControls.TextBox txtMobileNumber;
 
         /// <summary>
-        /// btnPhysicalStores control.
+        /// btnSearch control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnPhysicalStores;
+        protected global::System.Web.UI.WebControls.Button btnSearch;
 
         /// <summary>
-        /// btnResolvedTickets control.
+        /// lblStatus control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnResolvedTickets;
+        protected global::System.Web.UI.WebControls.Label lblStatus;
 
         /// <summary>
-        /// btnCustomerAccounts control.
+        /// tblSMSOffers control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCustomerAccounts;
+        protected global::System.Web.UI.WebControls.Table tblSMSOffers;
 
         /// <summary>
-        /// btnAccountsByPlan control.
+        /// btnBack control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAccountsByPlan;
-
-        /// <summary>
-        /// btnAccountUsage control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAccountUsage;
-
-        /// <summary>
-        /// btnRemoveBenefits control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnRemoveBenefits;
-
-        /// <summary>
-        /// btnSmsOffers control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSmsOffers;
+        protected global::System.Web.UI.WebControls.Button btnBack;
     }
 }
