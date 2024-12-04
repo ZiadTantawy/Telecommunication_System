@@ -43,7 +43,7 @@ namespace Telecommunication_System
                         {
                             
                             // Redirect to user dashboard or another page on successful login
-                            Response.Redirect("CustomerPage3/CostumerDashboard.aspx"); // Replace with actual user page
+                            Response.Redirect("CustomerPage1/CustomerDashboard1.aspx");
                         }
                     }
                 }

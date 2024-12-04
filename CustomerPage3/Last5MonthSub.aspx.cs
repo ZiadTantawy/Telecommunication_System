@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -13,6 +11,15 @@ namespace Telecommunication_System.CustomerPage3
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                // Only execute on the initial page load
+                BindGridView();
+            }
+        }
+
+        private void BindGridView()
+        {
             string connStr = System.Configuration.ConfigurationManager.ConnectionStrings["Telecom_Team_104"].ConnectionString;
 
             string query = "Select * from dbo.Subscribed_plans_5_Months(@MobileNo)";
@@ -21,26 +28,21 @@ namespace Telecommunication_System.CustomerPage3
             {
                 try
                 {
-                    
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
-                    
-
                         cmd.Parameters.AddWithValue("@MobileNo", Session["MobileNumber"].ToString());
                         conn.Open();
 
-                        using(SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd))
+                        using (SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd))
                         {
-                         
                             DataTable dataTable = new DataTable();
                             dataAdapter.Fill(dataTable);
 
-
                             if (dataTable.Rows.Count == 0)
                             {
-                                lblMessage.Text = "You have no Subsciptions in the last 5 month";
+                                lblMessage.Text = "You have no Subscriptions in the last 5 months";
                                 lblMessage.Visible = true;
-                                GridViewServicePlans.Visible = false; 
+                                GridViewServicePlans.Visible = false;
                             }
                             else
                             {
@@ -52,9 +54,11 @@ namespace Telecommunication_System.CustomerPage3
                         }
                     }
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
-                    Response.Write("An error has occured: "+ex.Message);
+                    lblMessage.Text = "An error has occurred: " + ex.Message;
+                    lblMessage.Visible = true;
+                    GridViewServicePlans.Visible = false;
                 }
             }
         }

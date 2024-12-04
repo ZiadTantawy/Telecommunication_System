@@ -85,7 +85,9 @@
     <Content Include="CustomerPage1\ServicePlansView.aspx" />
     <Content Include="AdminPage1\RemoveBenefitsPage.aspx" />
     <Content Include="AdminPage1\SmsOffersPage.aspx" />
-    <Content Include="CustomerPage3\CostumerDashboard.aspx" />
+    <Content Include="CustomerPage3\CostumerDashboard.aspx">
+      <BrowseToURL>~/CustomerPage3/CuostumerDashboard.aspx</BrowseToURL>
+    </Content>
     <Content Include="CustomerPage3\AllShops.aspx" />
     <Content Include="CustomerPage3\Last5MonthSub.aspx" />
     <Content Include="CustomerPage3\PaymentCashback.aspx" />

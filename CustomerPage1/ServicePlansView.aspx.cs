@@ -1,11 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+using System.Data;
+using System.Data.SqlClient;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Data;
-using System.Data.SqlClient;
 using System.Web.Configuration;
 
 namespace Telecommunication_System.CustomerPage1
@@ -38,6 +36,7 @@ namespace Telecommunication_System.CustomerPage1
                         // Clear existing rows in the table before adding new data
                         tblServicePlans.Rows.Clear();
 
+                        // Create header row
                         TableRow headerRow = new TableRow();
                         for (int i = 0; i < rdr.FieldCount; i++)
                         {
@@ -54,7 +53,7 @@ namespace Telecommunication_System.CustomerPage1
                             for (int i = 0; i < rdr.FieldCount; i++)
                             {
                                 TableCell cell = new TableCell();
-                                cell.Text = (rdr.IsDBNull(i) ? "null" : rdr[i].ToString());
+                                cell.Text = rdr.IsDBNull(i) ? "null" : rdr[i].ToString();
                                 row.Cells.Add(cell);
                             }
                             tblServicePlans.Rows.Add(row);
@@ -64,14 +63,15 @@ namespace Telecommunication_System.CustomerPage1
             }
             catch (Exception ex)
             {
-                Response.Write(ex.Message);
+                // Handle the error, possibly by displaying a message
+                Response.Write($"<script>alert('An error occurred: {ex.Message}');</script>");
             }
         }
 
         protected void redirectBack(object sender, EventArgs e)
         {
+            // Redirect to the customer dashboard
             Response.Redirect("CustomerDashboard1.aspx");
         }
     }
 }
-    

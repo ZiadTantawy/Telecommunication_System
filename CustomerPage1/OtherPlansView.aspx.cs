@@ -1,11 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+using System.Data;
+using System.Data.SqlClient;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Data;
-using System.Data.SqlClient;
 using System.Web.Configuration;
 
 namespace Telecommunication_System.CustomerPage1
@@ -14,16 +12,28 @@ namespace Telecommunication_System.CustomerPage1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            // Retrieve the mobile number from the session and display it in the label
+            string mobileNo = Session["MobileNumber"] as string;
 
+            if (!string.IsNullOrWhiteSpace(mobileNo))
+            {
+                lblMobileNo.Text = mobileNo; // Display the mobile number
+            }
+            else
+            {
+                lblMobileNo.Text = "Mobile number not found.";
+            }
         }
+
         protected void btnSearch_Click(object sender, EventArgs e)
         {
-            string mobileNo = txtMno.Text.Trim();
+            // Retrieve the mobile number from the session
+            string mobileNo = Session["MobileNumber"] as string;
 
             // Validate the mobile number
             if (string.IsNullOrWhiteSpace(mobileNo) || mobileNo.Length != 11 || !long.TryParse(mobileNo, out _))
             {
-                Response.Write("<script>alert('Please enter a valid 11-digit Mobile Number.');</script>");
+                Response.Write("<script>alert('Invalid Mobile Number in session.');</script>");
                 return;
             }
 
@@ -39,15 +49,18 @@ namespace Telecommunication_System.CustomerPage1
             {
                 using (SqlConnection conn = new SqlConnection(connstr))
                 {
-                    SqlCommand cmd = new SqlCommand("SELECT * FROM Unsubscribed_Plans(@MobileNo)", conn);
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@MobileNo", mobileNo);
+                    // Correct parameter name to match the stored procedure
+                    SqlCommand cmd = new SqlCommand("Unsubscribed_Plans", conn);
+                    cmd.CommandType = CommandType.StoredProcedure; // Call stored procedure
+
+                    // Ensure the parameter name matches exactly
+                    cmd.Parameters.AddWithValue("@MobileNo", mobileNo); // Pass the correct parameter name
 
                     conn.Open();
 
                     using (SqlDataReader rdr = cmd.ExecuteReader())
                     {
-                        Table tblOtherPlans = new Table { CssClass = "styled-table" };
+                        Table tblUnsubscribedPlans = new Table { CssClass = "styled-table" };
 
                         // Create header row
                         TableRow headerRow = new TableRow();
@@ -57,7 +70,7 @@ namespace Telecommunication_System.CustomerPage1
                             headerCell.Text = rdr.GetName(i);
                             headerRow.Cells.Add(headerCell);
                         }
-                        tblOtherPlans.Rows.Add(headerRow);
+                        tblUnsubscribedPlans.Rows.Add(headerRow);
 
                         // Add data rows
                         while (rdr.Read())
@@ -69,11 +82,11 @@ namespace Telecommunication_System.CustomerPage1
                                 cell.Text = rdr.IsDBNull(i) ? "null" : rdr[i].ToString();
                                 row.Cells.Add(cell);
                             }
-                            tblOtherPlans.Rows.Add(row);
+                            tblUnsubscribedPlans.Rows.Add(row);
                         }
 
                         // Add the dynamically created table to the form
-                        form1.Controls.Add(tblOtherPlans);
+                        form1.Controls.Add(tblUnsubscribedPlans);
                     }
                 }
             }
@@ -90,4 +103,3 @@ namespace Telecommunication_System.CustomerPage1
         }
     }
 }
-    

@@ -1,11 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+using System.Data;
+using System.Data.SqlClient;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Data;
-using System.Data.SqlClient;
 using System.Web.Configuration;
 
 namespace Telecommunication_System.CustomerPage1
@@ -14,18 +12,32 @@ namespace Telecommunication_System.CustomerPage1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                // Check if the mobile number is in session
+                if (Session["MobileNumber"] != null)
+                {
+                    // Get the mobile number from session
+                    string mobileNo = Session["MobileNumber"].ToString();
 
+                    // Display the mobile number on the page
+                    lblMobileNumber.Text = mobileNo;
+
+                    // Clear the table on initial page load
+                    tblMonthlyUsage.Rows.Clear();
+                }
+                else
+                {
+                    // Handle the case where the session mobile number is not available
+                    Response.Redirect("LoginPage.aspx"); // Redirect to login if the session is invalid
+                }
+            }
         }
+
         protected void btnSearch_Click(object sender, EventArgs e)
         {
-            string mobileNo = txtMno.Text.Trim();
-
-            // Validate the mobile number
-            if (string.IsNullOrWhiteSpace(mobileNo) || mobileNo.Length != 11 || !long.TryParse(mobileNo, out _))
-            {
-                Response.Write("<script>alert('Please enter a valid 11-digit Mobile Number.');</script>");
-                return;
-            }
+            // Get the mobile number from session
+            string mobileNo = Session["MobileNumber"].ToString();
 
             // Call the method to fetch and display monthly usage
             BindMonthlyUsage(mobileNo);
@@ -48,7 +60,7 @@ namespace Telecommunication_System.CustomerPage1
 
                     using (SqlDataReader rdr = cmd.ExecuteReader())
                     {
-                        tblMonthlyUsage.Rows.Clear();
+                        tblMonthlyUsage.Rows.Clear(); // Clear previous data
 
                         // Create header row
                         TableRow headerRow = new TableRow();
@@ -84,8 +96,8 @@ namespace Telecommunication_System.CustomerPage1
 
         protected void redirectBack(object sender, EventArgs e)
         {
+            // Redirect to the customer dashboard
             Response.Redirect("CustomerDashboard1.aspx");
         }
     }
 }
-    
