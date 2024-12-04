@@ -16,12 +16,12 @@ namespace Telecommunication_System.AdminPage1
 
         protected void btnPhysicalStores_Click(object sender, EventArgs e)
         {
-            Response.Redirect("PhysicalStoresPage.aspx");
+            Response.Redirect("PhysicalStoresView.aspx");
         }
 
         protected void btnResolvedTickets_Click(object sender, EventArgs e)
         {
-            Response.Redirect("ResolvedTicketsPage.aspx");
+            Response.Redirect("AllResolvedTickets.aspx");
         }
 
         protected void btnCustomerAccounts_Click(object sender, EventArgs e)
