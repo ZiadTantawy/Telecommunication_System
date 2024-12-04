@@ -4,6 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
+using System.Data.SqlClient;
+using System.Web.Configuration;
 
 namespace Telecommunication_System.CustomerPage1
 {
@@ -33,7 +36,7 @@ namespace Telecommunication_System.CustomerPage1
                     using (SqlDataReader rdr = cmd.ExecuteReader())
                     {
                         // Clear existing rows in the table before adding new data
-                        tblCustomerAccounts.Rows.Clear();
+                        tblServicePlans.Rows.Clear();
 
                         TableRow headerRow = new TableRow();
                         for (int i = 0; i < rdr.FieldCount; i++)
@@ -42,7 +45,7 @@ namespace Telecommunication_System.CustomerPage1
                             headerCell.Text = rdr.GetName(i);
                             headerRow.Cells.Add(headerCell);
                         }
-                        tblCustomerAccounts.Rows.Add(headerRow);
+                        tblServicePlans.Rows.Add(headerRow);
 
                         // Add data rows
                         while (rdr.Read())
@@ -54,7 +57,7 @@ namespace Telecommunication_System.CustomerPage1
                                 cell.Text = (rdr.IsDBNull(i) ? "null" : rdr[i].ToString());
                                 row.Cells.Add(cell);
                             }
-                            tblCustomerAccounts.Rows.Add(row);
+                            tblServicePlans.Rows.Add(row);
                         }
                     }
                 }
