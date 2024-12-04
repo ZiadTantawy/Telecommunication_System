@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Telecommunication_System.AdminPage1
+namespace Telecommunication_System.CustomerPage1
 {
 
 
-    public partial class AdminDashboard1
+    public partial class CustomerDashboard1
     {
 
         /// <summary>
@@ -24,75 +24,48 @@ namespace Telecommunication_System.AdminPage1
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// btnCustomerProfiles control.
+        /// Button1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCustomerProfiles;
+        protected global::System.Web.UI.WebControls.Button Button1;
 
         /// <summary>
-        /// btnPhysicalStores control.
+        /// Button2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnPhysicalStores;
+        protected global::System.Web.UI.WebControls.Button Button2;
 
         /// <summary>
-        /// btnResolvedTickets control.
+        /// Button3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnResolvedTickets;
+        protected global::System.Web.UI.WebControls.Button Button3;
 
         /// <summary>
-        /// btnCustomerAccounts control.
+        /// Button4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCustomerAccounts;
+        protected global::System.Web.UI.WebControls.Button Button4;
 
         /// <summary>
-        /// btnAccountsByPlan control.
+        /// Button5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAccountsByPlan;
-
-        /// <summary>
-        /// btnAccountUsage control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAccountUsage;
-
-        /// <summary>
-        /// btnRemoveBenefits control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnRemoveBenefits;
-
-        /// <summary>
-        /// btnSmsOffers control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSmsOffers;
+        protected global::System.Web.UI.WebControls.Button Button5;
     }
 }

@@ -15,7 +15,8 @@
     <AssemblyName>Telecommunication_System</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
-    <Use64BitIISExpress>false</Use64BitIISExpress>
+    <Use64BitIISExpress>
+    </Use64BitIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -71,8 +72,19 @@
     <Content Include="AdminLogin.aspx" />
     <Content Include="AdminPage1\AdminDashboard1.aspx" />
     <Content Include="AdminPage1\AllResolvedTickets.aspx" />
+    <Content Include="AdminPage1\CustomerAccountsPlanDate.aspx" />
+    <Content Include="AdminPage1\CustomerAccountSubscriptionsPage.aspx" />
     <Content Include="AdminPage1\CustomerProfilesView.aspx" />
+    <Content Include="AdminPage1\CustomerUsagePage.aspx" />
     <Content Include="AdminPage1\PhysicalStoresView.aspx" />
+    <Content Include="CustomerPage1\CashbackView.aspx" />
+    <Content Include="CustomerPage1\ConsumptionView.aspx" />
+    <Content Include="CustomerPage1\CustomerDashboard1.aspx" />
+    <Content Include="CustomerPage1\MonthlyUsageView.aspx" />
+    <Content Include="CustomerPage1\OtherPlansView.aspx" />
+    <Content Include="CustomerPage1\ServicePlansView.aspx" />
+    <Content Include="AdminPage1\RemoveBenefitsPage.aspx" />
+    <Content Include="AdminPage1\SmsOffersPage.aspx" />
     <Content Include="CustomerPage3\CostumerDashboard.aspx" />
     <Content Include="CustomerPage3\AllShops.aspx" />
     <Content Include="CustomerPage3\Last5MonthSub.aspx" />
@@ -99,12 +111,33 @@
     <Compile Include="AdminLogin.aspx.designer.cs">
       <DependentUpon>AdminLogin.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AdminPage1\AdminDashboard1.aspx.cs">
+      <DependentUpon>AdminDashboard1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPage1\AdminDashboard1.aspx.designer.cs">
+      <DependentUpon>AdminDashboard1.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AdminPage1\AllResolvedTickets.aspx.cs">
       <DependentUpon>AllResolvedTickets.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="AdminPage1\AllResolvedTickets.aspx.designer.cs">
       <DependentUpon>AllResolvedTickets.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPage1\CustomerAccountsPlanDate.aspx.cs">
+      <DependentUpon>CustomerAccountsPlanDate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPage1\CustomerAccountsPlanDate.aspx.designer.cs">
+      <DependentUpon>CustomerAccountsPlanDate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPage1\CustomerAccountSubscriptionsPage.aspx.cs">
+      <DependentUpon>CustomerAccountSubscriptionsPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPage1\CustomerAccountSubscriptionsPage.aspx.designer.cs">
+      <DependentUpon>CustomerAccountSubscriptionsPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminPage1\CustomerProfilesView.aspx.cs">
       <DependentUpon>CustomerProfilesView.aspx</DependentUpon>
@@ -113,12 +146,74 @@
     <Compile Include="AdminPage1\CustomerProfilesView.aspx.designer.cs">
       <DependentUpon>CustomerProfilesView.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AdminPage1\CustomerUsagePage.aspx.cs">
+      <DependentUpon>CustomerUsagePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPage1\CustomerUsagePage.aspx.designer.cs">
+      <DependentUpon>CustomerUsagePage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AdminPage1\PhysicalStoresView.aspx.cs">
       <DependentUpon>PhysicalStoresView.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="AdminPage1\PhysicalStoresView.aspx.designer.cs">
       <DependentUpon>PhysicalStoresView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerPage1\CashbackView.aspx.cs">
+      <DependentUpon>CashbackView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerPage1\CashbackView.aspx.designer.cs">
+      <DependentUpon>CashbackView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerPage1\ConsumptionView.aspx.cs">
+      <DependentUpon>ConsumptionView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerPage1\ConsumptionView.aspx.designer.cs">
+      <DependentUpon>ConsumptionView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerPage1\CustomerDashboard1.aspx.cs">
+      <DependentUpon>CustomerDashboard1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerPage1\CustomerDashboard1.aspx.designer.cs">
+      <DependentUpon>CustomerDashboard1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerPage1\MonthlyUsageView.aspx.cs">
+      <DependentUpon>MonthlyUsageView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerPage1\MonthlyUsageView.aspx.designer.cs">
+      <DependentUpon>MonthlyUsageView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerPage1\OtherPlansView.aspx.cs">
+      <DependentUpon>OtherPlansView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerPage1\OtherPlansView.aspx.designer.cs">
+      <DependentUpon>OtherPlansView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerPage1\ServicePlansView.aspx.cs">
+      <DependentUpon>ServicePlansView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerPage1\ServicePlansView.aspx.designer.cs">
+      <DependentUpon>ServicePlansView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPage1\RemoveBenefitsPage.aspx.cs">
+      <DependentUpon>RemoveBenefitsPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPage1\RemoveBenefitsPage.aspx.designer.cs">
+      <DependentUpon>RemoveBenefitsPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPage1\SmsOffersPage.aspx.cs">
+      <DependentUpon>SmsOffersPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPage1\SmsOffersPage.aspx.designer.cs">
+      <DependentUpon>SmsOffersPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="CustomerPage3\CostumerDashboard.aspx.cs">
       <DependentUpon>CostumerDashboard.aspx</DependentUpon>
@@ -203,6 +298,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="CustomerPage1\" />
+    <Folder Include="AdminPage2\" />
     <Folder Include="CustomerPage2\" />
   </ItemGroup>
   <PropertyGroup>
