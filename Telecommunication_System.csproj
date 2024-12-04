@@ -15,8 +15,7 @@
     <AssemblyName>Telecommunication_System</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
-    <Use64BitIISExpress>
-    </Use64BitIISExpress>
+    <Use64BitIISExpress>false</Use64BitIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -176,6 +175,7 @@
     </Compile>
     <Compile Include="CustomerPage1\CustomerDashboard1.aspx.cs">
       <DependentUpon>CustomerDashboard1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="CustomerPage1\CustomerDashboard1.aspx.designer.cs">
       <DependentUpon>CustomerDashboard1.aspx</DependentUpon>
@@ -297,8 +297,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="CustomerPage1\" />
-    <Folder Include="AdminPage2\" />
     <Folder Include="CustomerPage2\" />
   </ItemGroup>
   <PropertyGroup>
