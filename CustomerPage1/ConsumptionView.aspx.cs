@@ -1,9 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+using System.Data;
+using System.Data.SqlClient;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Web.Configuration;
 
 namespace Telecommunication_System.CustomerPage1
 {
@@ -11,17 +12,17 @@ namespace Telecommunication_System.CustomerPage1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
+
         protected void btnSearch_Click(object sender, EventArgs e)
         {
-          
             string planName = txtplanName.Text.Trim();
-            string startDate = txtstartDate.Text.Trim();
-            string endDate = txtendDate.Text.Trim();
+            string startDateText = txtstartDate.Text.Trim();
+            string endDateText = txtendDate.Text.Trim();
 
             // Validate subscription date and plan ID
-            if (string.IsNullOrWhiteSpace(planName) || string.IsNullOrWhiteSpace(startDate) || string.IsNullOrWhiteSpace(endDate))
+            if (string.IsNullOrWhiteSpace(planName) || string.IsNullOrWhiteSpace(startDateText) || string.IsNullOrWhiteSpace(endDateText))
             {
                 // Display error if inputs are missing
                 Response.Write("<script>alert('Please provide Plan name and start and end dates.');</script>");
@@ -50,11 +51,12 @@ namespace Telecommunication_System.CustomerPage1
                 Response.Write("<script>alert('Start date cannot be later than end date.');</script>");
                 return;
             }
-            // Call the method to bind data with the validated date and plan ID
-            BindConsumptionData(planName, parsedstartDate,parsedendDate);
+
+            // Call the method to bind data with the validated date and plan name
+            BindConsumptionData(planName, startDate, endDate);
         }
 
-        private void BindConsumptionData(DateTime subscriptionDate, string planID)
+        private void BindConsumptionData(string planName, DateTime startDate, DateTime endDate)
         {
             string connstr = WebConfigurationManager.ConnectionStrings["Telecom_Team_104"].ConnectionString;
 
@@ -62,10 +64,10 @@ namespace Telecommunication_System.CustomerPage1
             {
                 using (SqlConnection conn = new SqlConnection(connstr))
                 {
-                   
-                    SqlCommand cmd = new SqlCommand("SELECT * FROM Consumption(@Plan_name,@start_date, @end_data)", conn);
+                    // Query to execute the function or stored procedure
+                    SqlCommand cmd = new SqlCommand("SELECT * FROM Consumption(@Plan_name, @start_date, @end_date)", conn);
                     cmd.CommandType = CommandType.Text;
-                    cmd.Parameters.AddWithValue("@Plan_name", planName);               
+                    cmd.Parameters.AddWithValue("@Plan_name", planName);
                     cmd.Parameters.AddWithValue("@start_date", startDate);
                     cmd.Parameters.AddWithValue("@end_date", endDate);
 
@@ -73,7 +75,7 @@ namespace Telecommunication_System.CustomerPage1
 
                     using (SqlDataReader rdr = cmd.ExecuteReader())
                     {
-                        tblPlanConsumption.Rows.Clear();
+                        tblPlanconsumption.Rows.Clear();
 
                         // Create header row
                         TableRow headerRow = new TableRow();
@@ -83,7 +85,7 @@ namespace Telecommunication_System.CustomerPage1
                             headerCell.Text = rdr.GetName(i);
                             headerRow.Cells.Add(headerCell);
                         }
-                        tblPlanConsumption.Rows.Add(headerRow);
+                        tblPlanconsumption.Rows.Add(headerRow);
 
                         // Add data rows
                         while (rdr.Read())
@@ -95,7 +97,7 @@ namespace Telecommunication_System.CustomerPage1
                                 cell.Text = (rdr.IsDBNull(i) ? "null" : rdr[i].ToString());
                                 row.Cells.Add(cell);
                             }
-                            tblPlanConsumption.Rows.Add(row);
+                            tblPlanconsumption.Rows.Add(row);
                         }
                     }
                 }
@@ -113,4 +115,3 @@ namespace Telecommunication_System.CustomerPage1
         }
     }
 }
-    
