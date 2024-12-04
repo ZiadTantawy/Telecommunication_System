@@ -191,6 +191,7 @@
     </Compile>
     <Compile Include="CustomerPage1\ServicePlansView.aspx.designer.cs">
       <DependentUpon>ServicePlansView.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AdminPage1\RemoveBenefitsPage.aspx.cs">
       <DependentUpon>RemoveBenefitsPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
