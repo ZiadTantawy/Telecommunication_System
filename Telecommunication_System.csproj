@@ -15,7 +15,8 @@
     <AssemblyName>Telecommunication_System</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
-    <Use64BitIISExpress>false</Use64BitIISExpress>
+    <Use64BitIISExpress>
+    </Use64BitIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -72,6 +73,12 @@
     <Content Include="AdminPage1\AllResolvedTickets.aspx" />
     <Content Include="AdminPage1\CustomerProfilesView.aspx" />
     <Content Include="AdminPage1\PhysicalStoresView.aspx" />
+    <Content Include="CustomerPage1\CashbackView.aspx" />
+    <Content Include="CustomerPage1\ConsumptionView.aspx" />
+    <Content Include="CustomerPage1\CustomerDashboard1.aspx" />
+    <Content Include="CustomerPage1\MonthlyUsageView.aspx" />
+    <Content Include="CustomerPage1\OtherPlansView.aspx" />
+    <Content Include="CustomerPage1\ServicePlansView.aspx" />
     <Content Include="CustomerPage3\CostumerDashboard.aspx" />
     <Content Include="CustomerPage3\AllShops.aspx" />
     <Content Include="CustomerPage3\Last5MonthSub.aspx" />
@@ -117,6 +124,47 @@
     </Compile>
     <Compile Include="AdminPage1\PhysicalStoresView.aspx.designer.cs">
       <DependentUpon>PhysicalStoresView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerPage1\CashbackView.aspx.cs">
+      <DependentUpon>CashbackView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerPage1\CashbackView.aspx.designer.cs">
+      <DependentUpon>CashbackView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerPage1\ConsumptionView.aspx.cs">
+      <DependentUpon>ConsumptionView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerPage1\ConsumptionView.aspx.designer.cs">
+      <DependentUpon>ConsumptionView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerPage1\CustomerDashboard1.aspx.cs">
+      <DependentUpon>CustomerDashboard1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerPage1\CustomerDashboard1.aspx.designer.cs">
+      <DependentUpon>CustomerDashboard1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerPage1\MonthlyUsageView.aspx.cs">
+      <DependentUpon>MonthlyUsageView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerPage1\MonthlyUsageView.aspx.designer.cs">
+      <DependentUpon>MonthlyUsageView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerPage1\OtherPlansView.aspx.cs">
+      <DependentUpon>OtherPlansView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerPage1\OtherPlansView.aspx.designer.cs">
+      <DependentUpon>OtherPlansView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerPage1\ServicePlansView.aspx.cs">
+      <DependentUpon>ServicePlansView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerPage1\ServicePlansView.aspx.designer.cs">
+      <DependentUpon>ServicePlansView.aspx</DependentUpon>
     </Compile>
     <Compile Include="CustomerPage3\CostumerDashboard.aspx.cs">
       <DependentUpon>CostumerDashboard.aspx</DependentUpon>
@@ -194,7 +242,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="AdminPage2\" />
-    <Folder Include="CustomerPage1\" />
     <Folder Include="CustomerPage2\" />
   </ItemGroup>
   <PropertyGroup>
