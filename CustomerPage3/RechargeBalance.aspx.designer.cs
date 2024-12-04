@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Telecommunication_System.CustomerContent3
+namespace Telecommunication_System.CustomerPage3
 {
 
 
-    public partial class RenewSubscription
+    public partial class RechargeBalance
     {
 
         /// <summary>
@@ -24,13 +24,13 @@ namespace Telecommunication_System.CustomerContent3
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// PaymentAmount control.
+        /// txtAmount control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox PaymentAmount;
+        protected global::System.Web.UI.WebControls.TextBox txtAmount;
 
         /// <summary>
         /// rbtnCash control.
@@ -51,22 +51,13 @@ namespace Telecommunication_System.CustomerContent3
         protected global::System.Web.UI.WebControls.RadioButton rbtnCredit;
 
         /// <summary>
-        /// PlanID control.
+        /// btnRecharge control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox PlanID;
-
-        /// <summary>
-        /// btnRenew control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnRenew;
+        protected global::System.Web.UI.WebControls.Button btnRecharge;
 
         /// <summary>
         /// lblMessage control.

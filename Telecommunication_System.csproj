@@ -15,8 +15,7 @@
     <AssemblyName>Telecommunication_System</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
-    <Use64BitIISExpress>
-    </Use64BitIISExpress>
+    <Use64BitIISExpress>false</Use64BitIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -73,6 +72,9 @@
     <Content Include="CustomerPage3\CostumerDashboard.aspx" />
     <Content Include="CustomerPage3\AllShops.aspx" />
     <Content Include="CustomerPage3\Last5MonthSub.aspx" />
+    <Content Include="CustomerPage3\PaymentCashback.aspx" />
+    <Content Include="CustomerPage3\RechargeBalance.aspx" />
+    <Content Include="CustomerPage3\RedeemVoucher.aspx" />
     <Content Include="CustomerPage3\RenewSubscription.aspx" />
     <Content Include="CustomerLogin.aspx" />
     <Content Include="HomePage.aspx" />
@@ -115,6 +117,27 @@
     </Compile>
     <Compile Include="CustomerPage3\Last5MonthSub.aspx.designer.cs">
       <DependentUpon>Last5MonthSub.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerPage3\PaymentCashback.aspx.cs">
+      <DependentUpon>PaymentCashback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerPage3\PaymentCashback.aspx.designer.cs">
+      <DependentUpon>PaymentCashback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerPage3\RechargeBalance.aspx.cs">
+      <DependentUpon>RechargeBalance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerPage3\RechargeBalance.aspx.designer.cs">
+      <DependentUpon>RechargeBalance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerPage3\RedeemVoucher.aspx.cs">
+      <DependentUpon>RedeemVoucher.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerPage3\RedeemVoucher.aspx.designer.cs">
+      <DependentUpon>RedeemVoucher.aspx</DependentUpon>
     </Compile>
     <Compile Include="CustomerPage3\RenewSubscription.aspx.cs">
       <DependentUpon>RenewSubscription.aspx</DependentUpon>

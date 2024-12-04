@@ -15,18 +15,29 @@ namespace Telecommunication_System
         }
         protected void btnViewAllShops_Click(object sender, EventArgs e)
         {
-            Response.Redirect("CustomerContent3/AllShops.aspx");
+            Response.Redirect("AllShops.aspx");
         }
         protected void btnViewServicePlansPast5Month(object sender, EventArgs e)
         {
-            Response.Redirect("CustomerContent3/Last5MonthSub.aspx");
+            Response.Redirect("Last5MonthSub.aspx");
         }
 
         protected void btnRenewSubscription (object sender, EventArgs e)
         {
-            Response.Redirect("CustomerContent3/RenewSubscription.aspx");
+            Response.Redirect("RenewSubscription.aspx");
         }
         
-
+        protected void btnPaymentCashback(object sender, EventArgs e)
+        {
+            Response.Redirect("PaymentCashback.aspx");
+        }
+        protected void btnRechargeBalance (object sender, EventArgs e)
+        {
+            Response.Redirect("RechargeBalance.aspx");
+        }
+        protected void btnRedeemVoucher (object sender, EventArgs e)
+        {
+            Response.Redirect("RedeemVoucher.aspx");
+        }
     }
 }
