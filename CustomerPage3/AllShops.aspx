@@ -8,8 +8,8 @@
 </head>
 <body>
     <form id="form1" runat="server">
+        <h1>All Shop Details</h1>
        <div>
-           All Shop Details <br/>
         <asp:GridView ID="GridViewAllShops" runat="server" AutoGenerateColumns="true"></asp:GridView>
     </div>
     </form>

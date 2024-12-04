@@ -27,6 +27,17 @@ namespace Telecommunication_System
             Response.Redirect("RenewSubscription.aspx");
         }
         
-
+        protected void btnPaymentCashback(object sender, EventArgs e)
+        {
+            Response.Redirect("PaymentCashback.aspx");
+        }
+        protected void btnRechargeBalance (object sender, EventArgs e)
+        {
+            Response.Redirect("RechargeBalance.aspx");
+        }
+        protected void btnRedeemVoucher (object sender, EventArgs e)
+        {
+            Response.Redirect("RedeemVoucher.aspx");
+        }
     }
 }
