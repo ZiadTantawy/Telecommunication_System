@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AdminPage2\AdminDashboard2.aspx" />
     <Content Include="AdminLogin.aspx" />
     <Content Include="AdminPage1\AdminDashboard1.aspx" />
     <Content Include="AdminPage1\AllResolvedTickets.aspx" />
@@ -80,22 +81,23 @@
     <Content Include="HomePage.aspx" />
     <Content Include="Milestone 2 implementation -Final.sql" />
     <Content Include="Test data.sql" />
+    <Content Include="AdminPage2\ViewWalletDetails.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminPage2\AdminDashboard2.aspx.cs">
+      <DependentUpon>AdminDashboard2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPage2\AdminDashboard2.aspx.designer.cs">
+      <DependentUpon>AdminDashboard2.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AdminLogin.aspx.cs">
       <DependentUpon>AdminLogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="AdminLogin.aspx.designer.cs">
       <DependentUpon>AdminLogin.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="AdminPage1\AllCustomerProfiles.aspx.cs">
-      <DependentUpon>AllCustomerProfiles.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AdminPage1\AllCustomerProfiles.aspx.designer.cs">
-      <DependentUpon>AllCustomerProfiles.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminPage1\AllResolvedTickets.aspx.cs">
       <DependentUpon>AllResolvedTickets.aspx</DependentUpon>
@@ -182,6 +184,13 @@
       <DependentUpon>HomePage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="AdminPage2\ViewWalletDetails.aspx.cs">
+      <DependentUpon>ViewWalletDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPage2\ViewWalletDetails.aspx.designer.cs">
+      <DependentUpon>ViewWalletDetails.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -193,7 +202,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="AdminPage2\" />
     <Folder Include="CustomerPage1\" />
     <Folder Include="CustomerPage2\" />
   </ItemGroup>
