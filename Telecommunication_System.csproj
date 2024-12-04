@@ -76,6 +76,7 @@
     <Content Include="AdminPage1\CustomerProfilesView.aspx" />
     <Content Include="AdminPage1\CustomerUsagePage.aspx" />
     <Content Include="AdminPage1\PhysicalStoresView.aspx" />
+    <Content Include="AdminPage2\AverageSentTransactionAmounts.aspx" />
     <Content Include="CustomerPage1\CashbackView.aspx" />
     <Content Include="CustomerPage1\ConsumptionView.aspx" />
     <Content Include="CustomerPage1\CustomerDashboard1.aspx" />
@@ -90,9 +91,16 @@
     <Content Include="CustomerPage3\RenewSubscription.aspx" />
     <Content Include="CustomerLogin.aspx" />
     <Content Include="HomePage.aspx" />
+    <Content Include="AdminPage2\LinkedToWallet.aspx" />
     <Content Include="Milestone 2 implementation -Final.sql" />
     <Content Include="Test data.sql" />
     <Content Include="AdminPage2\ViewWalletDetails.aspx" />
+    <Content Include="AdminPage2\ViewCashbackTransactions.aspx" />
+    <Content Include="AdminPage2\ViewPaymentTransactions.aspx" />
+    <Content Include="AdminPage2\ViewShopsList.aspx" />
+    <Content Include="AdminPage2\ViewAcceptedPaymentTransactions.aspx" />
+    <Content Include="AdminPage2\ViewAmountReturnedCashback.aspx" />
+    <Content Include="AdminPage2\UpdateEarnedPoints.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -158,6 +166,13 @@
     </Compile>
     <Compile Include="AdminPage1\PhysicalStoresView.aspx.designer.cs">
       <DependentUpon>PhysicalStoresView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPage2\AverageSentTransactionAmounts.aspx.cs">
+      <DependentUpon>AverageSentTransactionAmounts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPage2\AverageSentTransactionAmounts.aspx.designer.cs">
+      <DependentUpon>AverageSentTransactionAmounts.aspx</DependentUpon>
     </Compile>
     <Compile Include="CustomerPage1\CashbackView.aspx.cs">
       <DependentUpon>CashbackView.aspx</DependentUpon>
@@ -278,6 +293,13 @@
     <Compile Include="HomePage.aspx.designer.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AdminPage2\LinkedToWallet.aspx.cs">
+      <DependentUpon>LinkedToWallet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPage2\LinkedToWallet.aspx.designer.cs">
+      <DependentUpon>LinkedToWallet.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="AdminPage2\ViewWalletDetails.aspx.cs">
       <DependentUpon>ViewWalletDetails.aspx</DependentUpon>
@@ -285,6 +307,48 @@
     </Compile>
     <Compile Include="AdminPage2\ViewWalletDetails.aspx.designer.cs">
       <DependentUpon>ViewWalletDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPage2\ViewCashbackTransactions.aspx.cs">
+      <DependentUpon>ViewCashbackTransactions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPage2\ViewCashbackTransactions.aspx.designer.cs">
+      <DependentUpon>ViewCashbackTransactions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPage2\ViewPaymentTransactions.aspx.cs">
+      <DependentUpon>ViewPaymentTransactions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPage2\ViewPaymentTransactions.aspx.designer.cs">
+      <DependentUpon>ViewPaymentTransactions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPage2\ViewShopsList.aspx.cs">
+      <DependentUpon>ViewShopsList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPage2\ViewShopsList.aspx.designer.cs">
+      <DependentUpon>ViewShopsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPage2\ViewAcceptedPaymentTransactions.aspx.cs">
+      <DependentUpon>ViewAcceptedPaymentTransactions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPage2\ViewAcceptedPaymentTransactions.aspx.designer.cs">
+      <DependentUpon>ViewAcceptedPaymentTransactions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPage2\ViewAmountReturnedCashback.aspx.cs">
+      <DependentUpon>ViewAmountReturnedCashback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPage2\ViewAmountReturnedCashback.aspx.designer.cs">
+      <DependentUpon>ViewAmountReturnedCashback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPage2\UpdateEarnedPoints.aspx.cs">
+      <DependentUpon>UpdateEarnedPoints.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPage2\UpdateEarnedPoints.aspx.designer.cs">
+      <DependentUpon>UpdateEarnedPoints.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

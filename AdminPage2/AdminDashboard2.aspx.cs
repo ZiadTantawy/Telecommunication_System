@@ -22,49 +22,49 @@ namespace Telecommunication_System
         protected void Button2_Click(object sender, EventArgs e)
         {
             // Redirect to a new page for Button2
-            Response.Redirect("AdminPage2.aspx");
+            Response.Redirect("ViewShopsList.aspx");
         }
 
         protected void Button3_Click(object sender, EventArgs e)
         {
             // Redirect to a new page for Button3
-            Response.Redirect("AdminPage3.aspx");
+            Response.Redirect("ViewPaymentTransactions.aspx");
         }
 
         protected void Button4_Click(object sender, EventArgs e)
         {
             // Redirect to a new page for Button4
-            Response.Redirect("AdminPage4.aspx");
+            Response.Redirect("ViewCashbackTransactions.aspx");
         }
 
         protected void Button5_Click(object sender, EventArgs e)
         {
             // Redirect to a new page for Button5
-            Response.Redirect("AdminPage5.aspx");
+            Response.Redirect("ViewAcceptedPaymentTransactions.aspx");
         }
 
         protected void Button6_Click(object sender, EventArgs e)
         {
             // Redirect to a new page for Button6
-            Response.Redirect("AdminPage6.aspx");
+            Response.Redirect("ViewAmountReturnedCashback.aspx");
         }
 
         protected void Button7_Click(object sender, EventArgs e)
         {
             // Redirect to a new page for Button7
-            Response.Redirect("AdminPage7.aspx");
+            Response.Redirect("AverageSentTransactionAmounts.aspx");
         }
 
         protected void Button8_Click(object sender, EventArgs e)
         {
             // Redirect to a new page for Button8
-            Response.Redirect("AdminPage8.aspx");
+            Response.Redirect("LinkedToWallet.aspx");
         }
 
         protected void Button9_Click(object sender, EventArgs e)
         {
             // Redirect to a new page for Button9
-            Response.Redirect("AdminPage9.aspx");
+            Response.Redirect("UpdateEarnedPoints.aspx");
         }
     }
 }
