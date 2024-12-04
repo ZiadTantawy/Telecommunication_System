@@ -11,7 +11,7 @@ namespace Telecommunication_System.AdminPage1
 {
 
 
-    public partial class AdminDashboard1
+    public partial class BenefitsPage
     {
 
         /// <summary>
@@ -24,58 +24,22 @@ namespace Telecommunication_System.AdminPage1
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// btnCustomerProfiles control.
+        /// txtMobileNumber control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCustomerProfiles;
+        protected global::System.Web.UI.WebControls.TextBox txtMobileNumber;
 
         /// <summary>
-        /// btnPhysicalStores control.
+        /// txtPlanID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnPhysicalStores;
-
-        /// <summary>
-        /// btnResolvedTickets control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnResolvedTickets;
-
-        /// <summary>
-        /// btnCustomerAccounts control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCustomerAccounts;
-
-        /// <summary>
-        /// btnAccountsByPlan control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAccountsByPlan;
-
-        /// <summary>
-        /// btnAccountUsage control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAccountUsage;
+        protected global::System.Web.UI.WebControls.TextBox txtPlanID;
 
         /// <summary>
         /// btnRemoveBenefits control.
@@ -87,12 +51,21 @@ namespace Telecommunication_System.AdminPage1
         protected global::System.Web.UI.WebControls.Button btnRemoveBenefits;
 
         /// <summary>
-        /// btnSmsOffers control.
+        /// lblStatus control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSmsOffers;
+        protected global::System.Web.UI.WebControls.Label lblStatus;
+
+        /// <summary>
+        /// btnBack control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnBack;
     }
 }
