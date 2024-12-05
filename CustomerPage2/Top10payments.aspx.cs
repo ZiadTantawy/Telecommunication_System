@@ -13,17 +13,16 @@ namespace Telecommunication_System.CustomerPage2
         {
              if (!IsPostBack)
             {
-                lblMessage.Visible = false;
-                GridViewTopPayments.Visible = false;
+                checkid();
             }
         }
         protected void checkid(object sender, EventArgs e)
         {
-            string mobileNumber = MobileNumber.Text; 
+            string Mobilenumber = MobileNumber.Text; 
 
-            if (!string.IsNullOrEmpty(mobileNumber))
+            if (!string.IsNullOrEmpty(Mobilenumber) && Mobilenumber.Length == 11)
             {
-                ShowTop10Payments(mobileNumber);
+                ShowTop10Payments(Mobilenumber);
             }
             else
             {
@@ -32,7 +31,7 @@ namespace Telecommunication_System.CustomerPage2
             }
         }
 
-        private void ShowTop10Payments(string mobileNumber)
+        private void ShowTop10Payments(string Mobilenumber)
         {
 
             string connStr = System.Configuration.ConfigurationManager.ConnectionStrings["Telecom_Team_104"].ConnectionString;
@@ -46,7 +45,7 @@ namespace Telecommunication_System.CustomerPage2
                     
                     SqlDataAdapter dataAdapter = new SqlDataAdapter(query, conn);
                     dataAdapter.SelectCommand.CommandType = CommandType.StoredProcedure;
-                    dataAdapter.SelectCommand.Parameters.AddWithValue("@mobile_num", mobileNumber); 
+                    dataAdapter.SelectCommand.Parameters.AddWithValue("@mobile_num", Mobilenumber); 
                     dataAdapter.Fill(dataTable);
                 }
 
@@ -70,8 +69,12 @@ namespace Telecommunication_System.CustomerPage2
                 lblMessage.Text = "An error occurred:" + ex.Message; 
                 lblMessage.Visible = true;
                 GridViewTopPayments.Visible = false;
-            }   
-            }
+            } 
+         }
+        protected void redirectBack(object sender, EventArgs e)
+        {
+            Response.Redirect("CustomerDashboard2.aspx");
         }
     }
+    
 }

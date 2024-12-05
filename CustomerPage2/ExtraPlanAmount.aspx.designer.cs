@@ -11,7 +11,7 @@ namespace Telecommunication_System.AdminPage1
 {
 
 
-    public partial class HighestVoucher
+    public partial class ExtraPlanAmount
     {
 
         /// <summary>
@@ -31,6 +31,15 @@ namespace Telecommunication_System.AdminPage1
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox MobileNumber;
+
+        /// <summary>
+        /// Plann=Name control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox Plann = Name;
 
         /// <summary>
         /// btnSearch control.

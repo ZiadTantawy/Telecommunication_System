@@ -85,6 +85,13 @@
     <Content Include="CustomerPage1\ServicePlansView.aspx" />
     <Content Include="AdminPage1\RemoveBenefitsPage.aspx" />
     <Content Include="AdminPage1\SmsOffersPage.aspx" />
+    <Content Include="CustomerPage2\AllActiveBenefits.aspx" />
+    <Content Include="CustomerPage2\CustomerDashboard2.aspx" />
+    <Content Include="CustomerPage2\ExtraPlanAmount.aspx" />
+    <Content Include="CustomerPage2\HighestVoucher.aspx" />
+    <Content Include="CustomerPage2\RemPlanAmount.aspx" />
+    <Content Include="CustomerPage2\Top10payments.aspx" />
+    <Content Include="CustomerPage2\UnresolvedTickets.aspx" />
     <Content Include="CustomerPage3\CostumerDashboard.aspx">
       <BrowseToURL>~/CustomerPage3/CuostumerDashboard.aspx</BrowseToURL>
     </Content>
@@ -235,6 +242,49 @@
     <Compile Include="AdminPage1\SmsOffersPage.aspx.designer.cs">
       <DependentUpon>SmsOffersPage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CustomerPage2\AllActiveBenefits.aspx.cs">
+      <DependentUpon>AllActiveBenefits.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerPage2\AllActiveBenefits.aspx.designer.cs">
+      <DependentUpon>AllActiveBenefits.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerPage2\CustomerDashboard2.aspx.cs">
+      <DependentUpon>CustomerDashboard2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerPage2\CustomerDashboard2.aspx.designer.cs">
+      <DependentUpon>CustomerDashboard2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerPage2\ExtraPlanAmount.aspx.cs">
+      <DependentUpon>ExtraPlanAmount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerPage2\ExtraPlanAmount.aspx.designer.cs">
+      <DependentUpon>ExtraPlanAmount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerPage2\HighestVoucher.aspx.cs">
+      <DependentUpon>HighestVoucher.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerPage2\HighestVoucher.aspx.designer.cs">
+      <DependentUpon>HighestVoucher.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerPage2\RemPlanAmount.aspx.cs">
+      <DependentUpon>RemPlanAmount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerPage2\RemPlanAmount.aspx.designer.cs">
+      <DependentUpon>RemPlanAmount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerPage2\Top10payments.aspx.cs">
+      <DependentUpon>Top10payments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerPage2\Top10payments.aspx.designer.cs">
+      <DependentUpon>Top10payments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerPage2\UnresolvedTickets.aspx.cs">
+      <DependentUpon>UnresolvedTickets.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerPage2\UnresolvedTickets.aspx.designer.cs">
+      <DependentUpon>UnresolvedTickets.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CustomerPage3\CostumerDashboard.aspx.cs">
       <DependentUpon>CostumerDashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -365,9 +415,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="CustomerPage2\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

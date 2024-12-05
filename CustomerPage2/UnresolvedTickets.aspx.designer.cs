@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Telecommunication_System.AdminPage1
+namespace Telecommunication_System
 {
 
 
-    public partial class HighestVoucher
+    public partial class UnresolvedTickets
     {
 
         /// <summary>
@@ -24,22 +24,13 @@ namespace Telecommunication_System.AdminPage1
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// MobileNumber control.
+        /// nationalID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox MobileNumber;
-
-        /// <summary>
-        /// btnSearch control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSearch;
+        protected global::System.Web.UI.WebControls.TextBox nationalID;
 
         /// <summary>
         /// btnBack control.

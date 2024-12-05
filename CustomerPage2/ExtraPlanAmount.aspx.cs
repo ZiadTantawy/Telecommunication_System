@@ -13,38 +13,38 @@ namespace Telecommunication_System.CustomerPage2
         {
             if (!IsPostBack)
             {
-                lblMessage.Visible = false;
+                checkinputs();
             }
         }
 
         protected void checkinputs(object sender, EventArgs e)
         {
-            string paymentId = PaymentId.Text;  // Assuming PaymentId is a TextBox in your form
-            string planId = PlanId.Text;  
+            string Mobilenumber = MobileNumber.Text;  
+            string planname = PlanName.Text;
 
-             if (!string.IsNullOrEmpty(paymentId) && !string.IsNullOrEmpty(planId))
+            if (!string.IsNullOrEmpty(Mobilenumber) && Mobilenumber.Length == 11 && !string.IsNullOrEmpty(Planname))
             {
-                ShowExtraAmount(paymentId, planId);
+                ShowExtraAmount(Mobilenumber, Planname);
             }
             else
             {
-                lblMessage.Text = "Please enter a valid payment ID and plan ID.";
+                lblMessage.Text = "Please enter a valid Mobile Number and Plan Name.";
                 lblMessage.Visible = true;
             }
         }
 
-        private void ShowExtraAmount(string paymentId, string planId)
+        private void ShowExtraAmount(string Mobilenumber, string Planname)
         {
             string connStr = WebConfigurationManager.ConnectionStrings["Telecom_Team_104"].ToString();
-            string query = "SELECT dbo.function_extra_amount(@payment_id,@plan_id) AS ExtraAmount";
+            string query = "SELECT dbo.Extra_plan_amount(@mobile_num,@plan_name)";
 
             try
             {
                 using (SqlConnection conn = new SqlConnection(connStr))
                 {
                     SqlCommand cmd = new SqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@payment_id", paymentId);
-                    cmd.Parameters.AddWithValue("@plan_id", planId);
+                    cmd.Parameters.AddWithValue("@mobile_num", Mobilenumber);
+                    cmd.Parameters.AddWithValue("@plan_name", Planname);
 
                     conn.Open();
                     object result = cmd.ExecuteScalar(); 
@@ -56,7 +56,7 @@ namespace Telecommunication_System.CustomerPage2
                     }
                     else
                     {
-                        lblMessage.Text = "No data found for the given payment ID and plan ID";
+                        lblMessage.Text = "No data found for the given mobile number and plan name";
                         lblMessage.Visible = true;
                     }
                 }
@@ -66,6 +66,10 @@ namespace Telecommunication_System.CustomerPage2
                 lblMessage.Text = "An error occurred: "+ ex.Message;
                 lblMessage.Visible = true;
             }
+        }
+        protected void redirectBack(object sender, EventArgs e)
+        {
+            Response.Redirect("CustomerDashboard2.aspx");
         }
     }
 }

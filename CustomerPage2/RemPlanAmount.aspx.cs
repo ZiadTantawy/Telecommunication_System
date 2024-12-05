@@ -7,24 +7,24 @@ using System.Web.UI.WebControls;
 
 namespace Telecommunication_System.CustomerPage2
 {
-    public partial class RemaPlanAmount : System.Web.UI.Page
+    public partial class RemPlanAmount : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
-               lblMessage.Visible = false;
+                checkinputs();
             }
         }
 
         protected void checkinputs(object sender, EventArgs e)
         {
-            string mobileNumber = MobileNumber.Text;
-            string planName = PlanName.Text;
+            string Mobilenumber = MobileNumber.Text;
+            string Planname = PlanName.Text;
 
-            if (!string.IsNullOrEmpty(mobileNumber) && mobileNumber.Length == 11 && !string.IsNullOrEmpty(planName))
+            if (!string.IsNullOrEmpty(Mobilenumber) && Mobilenumber.Length == 11 && !string.IsNullOrEmpty(Planname))
             {
-                ShowRemainingAmount(mobileNumber, planName);
+                ShowRemainingAmount(Mobilenumber, Planname);
             }
             else
             {
@@ -33,18 +33,18 @@ namespace Telecommunication_System.CustomerPage2
             }
         }
 
-        private void ShowRemainingAmount(string mobileNumber, string planName)
+        private void ShowRemainingAmount(string Mobilenumber, string Planname)
         {
             string connStr = WebConfigurationManager.ConnectionStrings["Telecom_Team_104"].ToString();
-            string query = "SELECT dbo.Remaining_plan_amount(@mobile_num, @plan_name) AS RemainingAmount";
+            string query = "SELECT * From dbo.Remaining_plan_amount(@mobile_num, @plan_name) ";
 
             try
             {
                 using (SqlConnection conn = new SqlConnection(connStr))
                 {
                     SqlCommand cmd = new SqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@mobile_num", mobileNumber);
-                    cmd.Parameters.AddWithValue("@plan_name", planName);
+                    cmd.Parameters.AddWithValue("@mobile_num", Mobilenumber);
+                    cmd.Parameters.AddWithValue("@plan_name", Planname);
 
                     conn.Open();
                     object result = cmd.ExecuteScalar(); 
@@ -65,6 +65,10 @@ namespace Telecommunication_System.CustomerPage2
                 lblMessage.Text = "An error occurred:" + ex.Message;
                 lblMessage.Visible = true;
             }
+        }
+        protected void redirectBack(object sender, EventArgs e)
+        {
+            Response.Redirect("CustomerDashboard2.aspx");
         }
     }
 }

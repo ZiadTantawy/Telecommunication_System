@@ -14,18 +14,18 @@ namespace Telecommunication_System.CustomerPage2
         {
             if (!IsPostBack) 
             {
-                lblMessage.Visible = false;
+                checkinput();
                
             }
         }
         protected void checkinput(object sender, EventArgs e)
         {
-            //inputs
-            string mobileNum = MobileNumber.Text; 
+    
+            string Mobilenumber = MobileNumber.Text; 
 
-            if (!string.IsNullOrEmpty(mobileNum) && mobileNum.Length == 11)
+            if (!string.IsNullOrEmpty(Mobilenumber) && Mobilenumber.Length == 11)
             {
-                GetHighestVoucher(mobileNum); // get highest voucher
+                GetHighestVoucher(Mobilenumber); 
             }
             else
             {
@@ -34,7 +34,7 @@ namespace Telecommunication_System.CustomerPage2
             }
         }
 
-        private void GetHighestVoucher(string mobileNum)
+        private void GetHighestVoucher(string Mobilenumber)
         {
             string connStr = WebConfigurationManager.ConnectionStrings["Telecom_Team_104"].ToString();
             string proc = "Account_Highest_Voucher";
@@ -45,29 +45,34 @@ namespace Telecommunication_System.CustomerPage2
                 {
                     SqlCommand cmd = new SqlCommand(proc, conn);
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@mobile_num", mobileNum); 
+                    cmd.Parameters.AddWithValue("@mobile_num", Mobilenumber);
 
                     conn.Open();
                     object result = cmd.ExecuteScalar();
 
                     if (result != null)
                     {
-                        lblMessage.Text = $"Highest Voucher ID: {result.ToString()}"; 
-                  
+                        lblMessage.Text = $"Highest Voucher ID: {result.ToString()}";
+
                     }
                     else
                     {
-                        lblMessage.Text = "No vouchers found for this mobile number."; 
-                        
+                        lblMessage.Text = "No vouchers found for this mobile number.";
+
                     }
                     lblMessage.Visible = true;
                 }
-                catch (Exception ex)
-                {
-                    lblMessage.Text = "An error occurred: "+ ex.Message;
-                    lblMessage.Visible = true;
-                }
+            }
+            catch (Exception ex)
+            {
+                lblMessage.Text = "An error occurred: " + ex.Message;
+                lblMessage.Visible = true;
             }
         }
+        protected void redirectBack(object sender, EventArgs e)
+        {
+            Response.Redirect("CustomerDashboard2.aspx");
+        }
+
     }
 }

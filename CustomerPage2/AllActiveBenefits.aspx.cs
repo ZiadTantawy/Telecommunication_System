@@ -15,7 +15,6 @@ namespace Telecommunication_System.CustomerPage2
         {
              if (!IsPostBack)
             {
-                lblMessage.Visible = false;
                 ActiveBenefits();
             }
         }
@@ -31,12 +30,13 @@ namespace Telecommunication_System.CustomerPage2
                     DataTable dataTable = new DataTable();
                     dataAdapter.Fill(dataTable);
 
-                    if(dataTable.Rows.Count > 0)
+                    if (dataTable.Rows.Count > 0)
                     {
-                        GridViewAllBenefits.DataSource = dataTable; 
-                        GridViewAllBenefits.DataBind();
+                        GridAllActiveaBenefits.DataSource = dataTable;
+                        GridAllActiveaBenefits.DataBind();
                     }
-                    else{
+                    else
+                    {
                         lblMessage.Text = "No active benefits found.";
                         lblMessage.Visible = true;
                     }
@@ -48,6 +48,11 @@ namespace Telecommunication_System.CustomerPage2
                 lblMessage.Visible = true;
             }
         }
+        protected void redirectBack(object sender, EventArgs e)
+        {
+           Response.Redirect("CustomerDashboard2.aspx");
+        }
+        
     }   
 }
     

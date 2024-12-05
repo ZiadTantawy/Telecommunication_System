@@ -9,32 +9,36 @@
 
 namespace Telecommunication_System.CustomerPage2
 {
-    public partial class ExtraPlanAmount
+
+
+    public partial class Top10payments
     {
+
         /// <summary>
         /// form1 control.
         /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// MobileNumber control.
+        /// GridViewTopPayments control.
         /// </summary>
-        protected global::System.Web.UI.WebControls.TextBox MobileNumber;
-
-        /// <summary>
-        /// PlanName control.
-        /// </summary>
-        protected global::System.Web.UI.WebControls.TextBox PlanName;
-
-        /// <summary>
-        /// ShowExtraAmount control.
-        /// </summary>
-        protected global::System.Web.UI.WebControls.Button ShowExtraAmountbutton;
-
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridViewTopPayments;
 
         /// <summary>
         /// lblMessage control.
         /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblMessage;
     }
 }

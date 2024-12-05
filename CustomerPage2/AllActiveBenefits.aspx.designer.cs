@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Telecommunication_System.AdminPage1
+namespace Telecommunication_System.CustomerPage2
 {
 
 
-    public partial class HighestVoucher
+    public partial class AllActiveBenefits
     {
 
         /// <summary>
@@ -24,24 +24,6 @@ namespace Telecommunication_System.AdminPage1
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// MobileNumber control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox MobileNumber;
-
-        /// <summary>
-        /// btnSearch control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSearch;
-
-        /// <summary>
         /// btnBack control.
         /// </summary>
         /// <remarks>
@@ -49,6 +31,15 @@ namespace Telecommunication_System.AdminPage1
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnBack;
+
+        /// <summary>
+        /// GridAllActiveBenefits control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridAllActiveBenefits;
 
         /// <summary>
         /// lblMessage control.

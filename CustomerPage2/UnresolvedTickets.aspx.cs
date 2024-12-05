@@ -13,13 +13,13 @@ namespace Telecommunication_System.CustomerPage2
         {
             if (!IsPostBack)
             {
-                lblMessage.Visible = false;
+                checkinput();
             }
         }
 
         protected void checkinput(object sender, EventArgs e)
         {
-            string nationalID = txtNationalID.Text.Trim(); 
+            string nationalID = NationalID.Text; 
 
             if (!string.IsNullOrEmpty(nationalID))
             {
@@ -63,6 +63,10 @@ namespace Telecommunication_System.CustomerPage2
                 lblMessage.Text = "An error occurred";
                 lblMessage.Visible = true;
             }
+        }
+        protected void redirectBack(object sender, EventArgs e)
+        {
+            Response.Redirect("CustomerDashboard2.aspx");
         }
     }
 }
