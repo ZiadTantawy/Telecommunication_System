@@ -20,20 +20,13 @@ namespace Telecommunication_System.CustomerPage3
             string amountInput = txtAmount.Text;
             string paymentMethod = "";
 
-
-            //Intialize amount
-            if (decimal.TryParse(amountInput, out decimal amount))
+            if (!decimal.TryParse(amountInput, out decimal amount))
             {
-                lblMessage.Visible = false;
-            }
-            else
-            {
-                lblMessage.Text = "Please Enter a vaild amount";
-                lblMessage.Visible = false;
+                lblMessage.Text = "Please enter a valid amount.";
                 lblMessage.ForeColor = System.Drawing.Color.Red;
+                lblMessage.Visible = true;
             }
 
-            //Initlaize Payment Method
             if (rbtnCash.Checked)
             {
                 paymentMethod = "cash";
@@ -46,41 +39,33 @@ namespace Telecommunication_System.CustomerPage3
             string connStr = System.Configuration.ConfigurationManager.ConnectionStrings["Telecom_Team_104"].ConnectionString;
 
             using (SqlConnection conn = new SqlConnection(connStr))
-
             {
-
                 try
                 {
-                    using (SqlCommand cmd = new SqlCommand("dbo.Initiate_balance_payment", conn)) { 
-                        cmd.Parameters.AddWithValue("@mobile_num", Session["MobileNumber"]);
+                    using (SqlCommand cmd = new SqlCommand("dbo.Initiate_balance_payment", conn))
+                    {
+                        cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+                        cmd.Parameters.AddWithValue("@mobile_num", Session["MobileNumber"].ToString());
                         cmd.Parameters.AddWithValue("@amount", amount);
                         cmd.Parameters.AddWithValue("@payment_method", paymentMethod);
-                        Response.Write(amount + " " + paymentMethod);
-
 
                         conn.Open();
-                        
                         cmd.ExecuteNonQuery();
-                        
-                        
-                        
 
-                        lblMessage.Text = "Account Recharged Successfully";
-                        lblMessage.Visible = true;
+                        lblMessage.Text = "Account recharged successfully.";
                         lblMessage.ForeColor = System.Drawing.Color.Green;
+                        lblMessage.Visible = true;
                     }
                 }
-
                 catch (Exception ex)
                 {
-                    lblMessage.Text = "An error has occured : " + ex.Message;
+                    lblMessage.Text = "An error has occurred: " + ex.Message;
                     lblMessage.ForeColor = System.Drawing.Color.Red;
                     lblMessage.Visible = true;
-                        
+
                 }
-                    
             }
         }
-
     }
 }

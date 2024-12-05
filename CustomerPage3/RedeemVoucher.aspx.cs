@@ -18,43 +18,50 @@ namespace Telecommunication_System.CustomerPage3
         {
             string voucherIDInput = VoucherID.Text;
 
-            if(int.TryParse(voucherIDInput, out int voucherID))
+            if (!int.TryParse(voucherIDInput, out int voucherID))
             {
-                lblMessage.Visible = false;
-            }
-            else
-            {
-                lblMessage.Text = "Please enter a valid Voucher ID";
+                lblMessage.Text = "Please enter a valid Voucher ID.";
                 lblMessage.Visible = true;
                 lblMessage.ForeColor = System.Drawing.Color.Red;
+                return;
+            }
+
+            string mobileNumber = Session["MobileNumber"]?.ToString();
+            if (string.IsNullOrEmpty(mobileNumber))
+            {
+                lblMessage.Text = "Mobile number is not available. Please log in again.";
+                lblMessage.Visible = true;
+                lblMessage.ForeColor = System.Drawing.Color.Red;
+                return;
             }
 
             string connStr = System.Configuration.ConfigurationManager.ConnectionStrings["Telecom_Team_104"].ConnectionString;
-            using(SqlConnection conn = new SqlConnection(connStr))
+            using (SqlConnection conn = new SqlConnection(connStr))
             {
                 try
                 {
-                    using (SqlCommand cmd = new SqlCommand("dbo.Redeem_voucher_points")) 
+                    using (SqlCommand cmd = new SqlCommand("dbo.Redeem_voucher_points", conn))
                     {
-                        cmd.Parameters.AddWithValue("@mobile_num", Session["MobileNumber"]);
-                        cmd.Parameters.AddWithValue("@voucher_id",voucherID);
+                        cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@mobile_num", mobileNumber);
+                        cmd.Parameters.AddWithValue("@voucher_id", voucherID);
 
                         conn.Open();
                         cmd.ExecuteNonQuery();
 
-                        lblMessage.Text = "Voucher reedemed successfully";
+                        lblMessage.Text = "Voucher redeemed successfully.";
                         lblMessage.Visible = true;
                         lblMessage.ForeColor = System.Drawing.Color.Green;
-
                     }
                 }
                 catch (Exception ex)
                 {
-                    lblMessage.Text = "An error has occured : "+ ex.Message;
-                    lblMessage.ForeColor = System.Drawing.Color.Red;
+                    lblMessage.Text = "An error has occurred: " + ex.Message;
                     lblMessage.Visible = true;
+                    lblMessage.ForeColor = System.Drawing.Color.Red;
                 }
             }
         }
+
     }
 }

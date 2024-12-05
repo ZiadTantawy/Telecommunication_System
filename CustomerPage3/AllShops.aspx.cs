@@ -14,9 +14,8 @@ namespace Telecommunication_System.CustomerPage3
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            lblMessage.Visible = true;
             string connStr = WebConfigurationManager.ConnectionStrings["Telecom_Team_104"].ToString();
-            
-
             string query = "SELECT * FROM allShops";
 
             using (SqlConnection conn = new SqlConnection(connStr))
@@ -30,11 +29,14 @@ namespace Telecommunication_System.CustomerPage3
 
                     GridViewAllShops.DataSource = dataTable;
                     GridViewAllShops.DataBind();
+                    lblMessage.Text = "Shops Retrived Successfully";
+                    lblMessage.ForeColor = System.Drawing.Color.Green;
 
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
-                    Response.Write("An error has occured"); 
+                    lblMessage.Text = "An error has occured " + ex.Message; 
+                    lblMessage.ForeColor = System.Drawing.Color.Red;
                 }
             }
 

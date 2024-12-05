@@ -824,6 +824,7 @@ go
 ------------------------------------------------------------------------------------------------------------
 ----------------------------------------Initiate_balance_payment-----------------------
 -------------------------Initiate an accepted payment for the input account for balance recharge--------------------------
+
 go
 CREATE PROCEDURE [Initiate_balance_payment]
 @mobile_num char(11), @amount decimal(10,1), @payment_method varchar(50)
@@ -839,17 +840,19 @@ where mobileNo = @mobile_num
 go
 
 
+
 --//////////////////////////////////////////////////////////////////////////////////////////////////////
 ------------------------------------------------------------------------------------------------------------
 ----------------------------------------Redeem_voucher_points-----------------------
 ------------------------- Redeem a voucher for the input account and update the total points of the account accordingly--------------------------
+
 go
 CREATE PROCEDURE [Redeem_voucher_points]
 @mobile_num char(11), @voucher_id int 
 
 AS
 If (Select v.points from Voucher v 
-where v.voucherID = @voucher_id and v.expiry_date >CURRENT_TIMESTAMP ) <= (Select a.points from customer_account a 
+where v.voucherID = @voucher_id and v.expiry_date >CURRENT_TIMESTAMP ) <= (Select a.point from customer_account a 
 where a.mobileNo = @mobile_num) 
 begin 
 declare @voucher_points int 
@@ -860,7 +863,7 @@ set mobileNo = @mobile_num , redeem_date = current_timestamp
 where voucherID = @voucher_id 
 
 update customer_account
-set points = points - @voucher_points
+set point = point - @voucher_points
 where mobileNo = @mobile_num
 end 
 else 

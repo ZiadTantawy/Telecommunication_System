@@ -43,9 +43,11 @@ VALUES
 ('45678901234', 4, '2023-04-10', 'active'),
 ('56789012345', 5, '2023-05-05', 'onhold');
 
+select * from Subscription
 INSERT INTO Subscription (mobileNo, planID, subscription_date, status)
 VALUES 
-('12345678901', 5, '2024-07-07', 'active')
+('12345678901', 3, '2024-07-07', 'active')
+
 --Plan Usage
 INSERT INTO Plan_Usage (start_date, end_date, data_consumption, minutes_used, SMS_sent, mobileNo, planID)
 VALUES 
@@ -296,6 +298,8 @@ SELECT * FROM Payment
 EXEC Initiate_balance_payment @MobileNo = '12345678901', @amount = 50.0, @payment_method = 'credit';
 SELECT * FROM Customer_Account WHERE mobileNo = '12345678901';
 SELECT * FROM Payment WHERE mobileNo = '12345678901';
+
+
 
 --o)
 exec Redeem_voucher_points @MobileNo='12345678901',@voucher_id=1
