@@ -51,7 +51,7 @@ namespace Telecommunication_System.AdminPage1
                     // Use the Benefits_Account stored procedure
                     SqlCommand cmd = new SqlCommand("Benefits_Account", conn);
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@MobileNo", mobileNumber); // Changed parameter name to match stored procedure
+                    cmd.Parameters.AddWithValue("@mobile_num", mobileNumber);
                     cmd.Parameters.AddWithValue("@plan_id", planId);
 
                     conn.Open();

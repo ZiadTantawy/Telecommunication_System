@@ -42,7 +42,7 @@
             <asp:Button ID="Button3" runat="server" OnClick="OtherPlans" CssClass="dashboard-button"  Text="view other plans" />
             <asp:Button ID="Button4" runat="server" OnClick="MonthlyUsage" CssClass="dashboard-button"  Text="view monthly usage" />
             <asp:Button ID="Button5" runat="server" OnClick="Cashback" CssClass="dashboard-button" Text="view cashback" />
-            <asp:Button ID="ButtonRedirectToDashboard2" runat="server" CssClass="dashboard-button" OnClick="RedirectToDashboard2" Text="DashBoard 2" />
+            <asp:Button ID="ButtonRedirectToDashboard2" runat="server" CssClass="dashboard-button" OnClick="RedirectToDashboard2" Text="Dashboard 2" />
         </div>
     </form>
 </body>

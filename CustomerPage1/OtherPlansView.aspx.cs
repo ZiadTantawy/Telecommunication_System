@@ -54,7 +54,7 @@ namespace Telecommunication_System.CustomerPage1
                     cmd.CommandType = CommandType.StoredProcedure; // Call stored procedure
 
                     // Ensure the parameter name matches exactly
-                    cmd.Parameters.AddWithValue("@MobileNo", mobileNo); // Pass the correct parameter name
+                    cmd.Parameters.AddWithValue("@mobile_num", mobileNo); // Pass the correct parameter name
 
                     conn.Open();
 

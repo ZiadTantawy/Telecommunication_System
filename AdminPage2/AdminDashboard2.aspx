@@ -56,6 +56,7 @@ a certain input duration (Start date and End Date)" OnClick="Button7_Click" />
             <asp:Button ID="Button7" runat="server" CssClass="dashboard-button" Text="Show if the input mobile Number is linked to a wallet, or not" OnClick="Button8_Click" />
             <asp:Button ID="Button9" runat="server" CssClass="dashboard-button" Text=" Take mobile number as an input then Update the total number of earned points
 that it should have" OnClick="Button9_Click" />
+             <asp:Button ID="backdash1" runat="server" Text="Back to Dashboard 1" onclick="dash1back"/>
         </div>
     </form>
 </body>

@@ -40,10 +40,10 @@ namespace Telecommunication_System.CustomerPage1
                 using (SqlConnection conn = new SqlConnection(connstr))
                 {
                     // Query to execute the function
-                    string query = "SELECT * FROM dbo.Cashback_Wallet_Customer(@NationalID)";
+                    string query = "SELECT * FROM dbo.Cashback_Wallet_Customer(@NID)";
                     SqlCommand cmd = new SqlCommand(query, conn);
                     cmd.CommandType = CommandType.Text;
-                    cmd.Parameters.AddWithValue("@NationalID", nationalID);
+                    cmd.Parameters.AddWithValue("@NID", nationalID);
 
                     conn.Open();
 

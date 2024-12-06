@@ -52,9 +52,9 @@ namespace Telecommunication_System.CustomerPage1
                 using (SqlConnection conn = new SqlConnection(connstr))
                 {
                     // Use the SQL function to fetch monthly usage
-                    SqlCommand cmd = new SqlCommand("SELECT * FROM Usage_Plan_CurrentMonth(@MobileNo)", conn);
+                    SqlCommand cmd = new SqlCommand("SELECT * FROM Usage_Plan_CurrentMonth(@mobile_num)", conn);
                     cmd.CommandType = CommandType.Text; // SQL functions are called as text
-                    cmd.Parameters.AddWithValue("@MobileNo", mobileNo);
+                    cmd.Parameters.AddWithValue("@mobile_num", mobileNo);
 
                     conn.Open();
 

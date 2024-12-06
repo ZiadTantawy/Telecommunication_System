@@ -31,12 +31,10 @@ namespace Telecommunication_System.AdminPage1
             // Validate if the date is in correct format
             if (!DateTime.TryParse(subscriptionDate, out parsedDate))
             {
-                // If the date is invalid, show an error message
                 Response.Write("<script>alert('Invalid date format. Please use the format YYYY-MM-DD.');</script>");
                 return;
             }
 
-            // Call the method to bind data with the validated date and plan ID
             BindCustomerAccountsData(parsedDate, planID);
         }
 
@@ -48,11 +46,10 @@ namespace Telecommunication_System.AdminPage1
             {
                 using (SqlConnection conn = new SqlConnection(connstr))
                 {
-                    // Use the stored function with the correct date and plan ID
                     SqlCommand cmd = new SqlCommand("SELECT * FROM Account_Plan_date(@sub_date, @plan_id)", conn);
                     cmd.CommandType = CommandType.Text;
-                    cmd.Parameters.AddWithValue("@sub_date", subscriptionDate);  // Use DateTime parameter
-                    cmd.Parameters.AddWithValue("@plan_id", planID);               // Use Plan ID
+                    cmd.Parameters.AddWithValue("@sub_date", subscriptionDate);
+                    cmd.Parameters.AddWithValue("@plan_id", planID);        
 
                     conn.Open();
 
@@ -87,7 +84,6 @@ namespace Telecommunication_System.AdminPage1
             }
             catch (Exception ex)
             {
-                // Display error if any exception occurs
                 Response.Redirect($"ErrorPage.aspx?message={Server.UrlEncode("An error occurred: " + ex.Message)}");
             }
         }

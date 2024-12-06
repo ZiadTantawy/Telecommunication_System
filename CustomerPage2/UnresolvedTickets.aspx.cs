@@ -13,11 +13,11 @@ namespace Telecommunication_System.CustomerPage2
         {
             if (!IsPostBack)
             {
-                checkinput();
+                checkinput(null, null); // Ensure the method is called even when the page loads
             }
         }
 
-        protected void checkinput()
+        protected void checkinput(object sender, EventArgs e)
         {
             string nationalID = NationalID.Text;
 
