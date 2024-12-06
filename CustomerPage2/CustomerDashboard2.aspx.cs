@@ -43,7 +43,7 @@ namespace Telecommunication_System.CustomerPage2
             }
         protected void AdminlogoutRedirect(object sender, EventArgs e)
         {
-            Response.Redirect("HomePage.aspx");
+            Response.Redirect("../HomePage.aspx");
             Session.Clear();
         }
         protected void CustDashboard1(object sender, EventArgs e)

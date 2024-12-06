@@ -51,6 +51,8 @@
             <asp:Button ID="RechargeBalance" runat="server" Text="Recharge Balance" CssClass="dashboard-button" OnClick="btnRechargeBalance"  />
 
             <asp:Button ID="RedeemVoucher" runat="server" Text="Redeem Voucher" CssClass="dashboard-button" OnClick="btnRedeemVoucher"  />
+
+             <asp:Button ID="backbtn" runat="server" CssClass="dashboard-button" Text="Back to Customer Dashboard 2" onclick="CustDashboard2"/>
                         
         </div>
     </form>

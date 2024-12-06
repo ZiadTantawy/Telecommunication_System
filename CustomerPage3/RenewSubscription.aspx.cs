@@ -99,7 +99,7 @@ namespace Telecommunication_System.CustomerPage3
         }
         protected void redirectBack(object sender, EventArgs e)
         {
-            Response.Redirect("CustomerDashboard2.aspx");
+            Response.Redirect("CostumerDashboard.aspx");
         }
     
     }

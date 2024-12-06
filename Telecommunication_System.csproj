@@ -93,7 +93,7 @@
     <Content Include="CustomerPage2\Top10payments.aspx" />
     <Content Include="CustomerPage2\UnresolvedTickets.aspx" />
     <Content Include="CustomerPage3\CostumerDashboard.aspx">
-      <BrowseToURL>~/CustomerPage3/CuostumerDashboard.aspx</BrowseToURL>
+      <BrowseToURL>~/CustomerPage3/CostumerDashboard.aspx</BrowseToURL>
     </Content>
     <Content Include="CustomerPage3\AllShops.aspx" />
     <Content Include="CustomerPage3\Last5MonthSub.aspx" />

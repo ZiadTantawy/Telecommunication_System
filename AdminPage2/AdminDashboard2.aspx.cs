@@ -68,7 +68,7 @@ namespace Telecommunication_System
         }
         protected void AdminlogoutRedirect(object sender, EventArgs e)
         {
-            Response.Redirect("HomePage.aspx");
+            Response.Redirect("../HomePage.aspx");
             Session.Clear();
         }
         protected void dash1back(object sender, EventArgs e)
