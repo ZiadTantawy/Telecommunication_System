@@ -39,6 +39,12 @@ namespace Telecommunication_System
         {
             Response.Redirect("RedeemVoucher.aspx");
         }
+        protected void AdminlogoutRedirect(object sender, EventArgs e)
+        {
+            Response.Redirect("HomePage.aspx");
+            Session.Clear();
+        }
+
         protected void CustDashboard2(object sender, EventArgs e)
         {
             Response.Redirect("../CustomerPage2/CustomerDashboard2.aspx");

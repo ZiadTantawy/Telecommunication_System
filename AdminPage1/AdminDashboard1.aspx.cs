@@ -52,5 +52,11 @@ namespace Telecommunication_System.AdminPage1
         {
             Response.Redirect("SmsOffersPage.aspx");
         }
+
+        protected void AdminlogoutRedirect(object sender, EventArgs e)
+        {
+            Response.Redirect("HomePage.aspx");
+            Session.Clear();
+        }
     }
 }

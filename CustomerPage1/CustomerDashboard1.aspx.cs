@@ -41,5 +41,10 @@ namespace Telecommunication_System.CustomerPage1
         {
             Response.Redirect("../CustomerPage2/CustomerDashboard2.aspx"); 
         }
+        protected void AdminlogoutRedirect(object sender, EventArgs e)
+        {
+            Response.Redirect("HomePage.aspx");
+            Session.Clear();
+        }
     }
 }

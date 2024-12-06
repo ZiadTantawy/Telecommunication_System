@@ -66,5 +66,10 @@ namespace Telecommunication_System
             // Redirect to a new page for Button9
             Response.Redirect("UpdateEarnedPoints.aspx");
         }
+        protected void AdminlogoutRedirect(object sender, EventArgs e)
+        {
+            Response.Redirect("HomePage.aspx");
+            Session.Clear();
+        }
     }
 }
