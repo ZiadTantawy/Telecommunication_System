@@ -17,25 +17,25 @@ namespace Telecommunication_System.CustomerPage2
             }
         }
 
-        protected void checkinput(object sender, EventArgs e)
+        protected void checkinput()
         {
-            string nationalID = NationalID.Text; 
+            string nationalID = NationalID.Text;
 
             if (!string.IsNullOrEmpty(nationalID))
             {
-                ShowTicketCount(nationalID); 
+                DisplayUnresolvedTickets(nationalID);
             }
             else
             {
-                lblMessage.Text = "Please enter a valid National ID."; 
+                lblMessage.Text = "Please enter a valid National ID.";
                 lblMessage.Visible = true;
             }
         }
 
-        private void ShowTicketCount(string nationalID)
+        private void DisplayUnresolvedTickets(string nationalID)
         {
             string connStr = WebConfigurationManager.ConnectionStrings["Telecom_Team_104"].ToString();
-            string storedProcedure = "Ticket_Account_Customer"; 
+            string storedProcedure = "Ticket_Account_Customer";
 
             try
             {
@@ -43,27 +43,28 @@ namespace Telecommunication_System.CustomerPage2
                 {
                     SqlCommand cmd = new SqlCommand(storedProcedure, conn);
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@NID", nationalID); 
+                    cmd.Parameters.AddWithValue("@NID", nationalID);
                     conn.Open();
-                    object result = cmd.ExecuteScalar(); 
+                    object result = cmd.ExecuteScalar();
                     if (result != null)
                     {
-                        lblMessage.Text = $"Unresolved Tickets: {result.ToString()}"; 
+                        lblMessage.Text = $"Unresolved Tickets: {result}";
                         lblMessage.Visible = true;
                     }
                     else
                     {
-                        lblMessage.Text = "No unresolved tickets found for this National ID."; 
+                        lblMessage.Text = "No unresolved tickets found for this National ID.";
                         lblMessage.Visible = true;
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                lblMessage.Text = "An error occurred";
+                lblMessage.Text = "An error occurred: " + ex.Message;
                 lblMessage.Visible = true;
             }
         }
+
         protected void redirectBack(object sender, EventArgs e)
         {
             Response.Redirect("CustomerDashboard2.aspx");

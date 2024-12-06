@@ -36,12 +36,12 @@
     <form id="form1" runat="server">
         <div class="dashboard-container">
             <h1>Customer Dashboard</h1>
-            <asp:Button ID="btnAllActiveBenefits" runat="server" Text="View All Active Benefits" CssClass="dashboard-button" OnClick="btnAllActiveBenefits" />
-            <asp:Button ID="btnExtraPlanAmount" runat="server" Text="Calculate Extra Plan Amount" CssClass="dashboard-button" OnClick="btnExtraPlanAmount" />
-            <asp:Button ID="btnHighestVoucher" runat="server" Text="View Highest Voucher" CssClass="dashboard-button" OnClick="btnHighestVoucher" />
-            <asp:Button ID="btnRemPlanAmount" runat="server" Text="Calculate Remaining Plan Amount" CssClass="dashboard-button" OnClick="btnRemPlanAmount" />
-            <asp:Button ID="btnTop10payments" runat="server" Text="Show Top 10 Payments" CssClass="dashboard-button" OnClick="btnTop10payments" />
-            <asp:Button ID="btnUnresolvedTickets" runat="server" Text="View Unresolved Tickets" CssClass="dashboard-button" OnClick="btnUnresolvedTickets" />
+            <asp:Button ID="btnAllActiveBenefits" runat="server" Text="View All Active Benefits" CssClass="dashboard-button" OnClick="btnAllActiveBenefits_click" />
+            <asp:Button ID="btnExtraPlanAmount" runat="server" Text="Calculate Extra Plan Amount" CssClass="dashboard-button" OnClick="btnExtraPlanAmount_click" />
+            <asp:Button ID="btnHighestVoucher" runat="server" Text="View Highest Voucher" CssClass="dashboard-button" OnClick="btnHighestVoucher_click" />
+            <asp:Button ID="btnRemPlanAmount" runat="server" Text="Calculate Remaining Plan Amount" CssClass="dashboard-button" OnClick="btnRemPlanAmount_click" />
+            <asp:Button ID="btnTop10payments" runat="server" Text="Show Top 10 Payments" CssClass="dashboard-button" OnClick="btnTop10payments_click" />
+            <asp:Button ID="btnUnresolvedTickets" runat="server" Text="View Unresolved Tickets" CssClass="dashboard-button" OnClick="btnUnresolvedTickets_click" />
         </div>
     </form>
 </body>

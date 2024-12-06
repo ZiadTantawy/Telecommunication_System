@@ -244,6 +244,7 @@
     </Compile>
     <Compile Include="CustomerPage2\AllActiveBenefits.aspx.cs">
       <DependentUpon>AllActiveBenefits.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="CustomerPage2\AllActiveBenefits.aspx.designer.cs">
       <DependentUpon>AllActiveBenefits.aspx</DependentUpon>
@@ -257,30 +258,35 @@
     </Compile>
     <Compile Include="CustomerPage2\ExtraPlanAmount.aspx.cs">
       <DependentUpon>ExtraPlanAmount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="CustomerPage2\ExtraPlanAmount.aspx.designer.cs">
       <DependentUpon>ExtraPlanAmount.aspx</DependentUpon>
     </Compile>
     <Compile Include="CustomerPage2\HighestVoucher.aspx.cs">
       <DependentUpon>HighestVoucher.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="CustomerPage2\HighestVoucher.aspx.designer.cs">
       <DependentUpon>HighestVoucher.aspx</DependentUpon>
     </Compile>
     <Compile Include="CustomerPage2\RemPlanAmount.aspx.cs">
       <DependentUpon>RemPlanAmount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="CustomerPage2\RemPlanAmount.aspx.designer.cs">
       <DependentUpon>RemPlanAmount.aspx</DependentUpon>
     </Compile>
     <Compile Include="CustomerPage2\Top10payments.aspx.cs">
       <DependentUpon>Top10payments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="CustomerPage2\Top10payments.aspx.designer.cs">
       <DependentUpon>Top10payments.aspx</DependentUpon>
     </Compile>
     <Compile Include="CustomerPage2\UnresolvedTickets.aspx.cs">
       <DependentUpon>UnresolvedTickets.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="CustomerPage2\UnresolvedTickets.aspx.designer.cs">
       <DependentUpon>UnresolvedTickets.aspx</DependentUpon>

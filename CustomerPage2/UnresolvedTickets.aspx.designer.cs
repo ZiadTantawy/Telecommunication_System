@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Telecommunication_System
+namespace Telecommunication_System.CustomerPage2
 {
 
 
-    public partial class UnresolvedTickets
+    public partial class ShowTicketCount
     {
 
         /// <summary>
@@ -24,13 +24,13 @@ namespace Telecommunication_System
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// nationalID control.
+        /// NationalID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox nationalID;
+        protected global::System.Web.UI.WebControls.TextBox NationalID;
 
         /// <summary>
         /// btnBack control.

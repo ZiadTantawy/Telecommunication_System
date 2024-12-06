@@ -12,32 +12,32 @@ namespace Telecommunication_System.CustomerPage2
         protected void Page_Load(object sender, EventArgs e)
         {
         }
-            protected void btnAllActiveBenefits(object sender, EventArgs e)
+            protected void btnAllActiveBenefits_click(object sender, EventArgs e)
             {
                 Response.Redirect("AllActiveBenefits.aspx");
             }
 
-            protected void btnExtraPlanAmount(object sender, EventArgs e)
+            protected void btnExtraPlanAmount_click(object sender, EventArgs e)
             {
                 Response.Redirect("ExtraPlanAmount.aspx");
             }
 
-            protected void btnRemPlanAmount(object sender, EventArgs e)
+            protected void btnRemPlanAmount_click(object sender, EventArgs e)
             {
                 Response.Redirect("RemPlanAmount.aspx");
             }
 
-            protected void btnHighestVoucher(object sender, EventArgs e)
+            protected void btnHighestVoucher_click(object sender, EventArgs e)
             {
                 Response.Redirect("HighestVoucher.aspx");
             }
 
-            protected void btnTop10payments(object sender, EventArgs e)
+            protected void btnTop10payments_click(object sender, EventArgs e)
             {
                 Response.Redirect("Top10payments.aspx");
             }
 
-            protected void btnUnresolvedTickets(object sender, EventArgs e)
+            protected void btnUnresolvedTickets_click(object sender, EventArgs e)
             {
                 Response.Redirect("UnresolvedTickets.aspx");
             }
