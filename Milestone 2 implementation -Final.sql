@@ -852,7 +852,7 @@ CREATE PROCEDURE [Redeem_voucher_points]
 
 AS
 If (Select v.points from Voucher v 
-where v.voucherID = @voucher_id and v.expiry_date >CURRENT_TIMESTAMP ) <= (Select a.point from customer_account a 
+where v.voucherID = @voucher_id and v.expiry_date >CURRENT_TIMESTAMP ) <= (Select a.points from customer_account a 
 where a.mobileNo = @mobile_num) 
 begin 
 declare @voucher_points int 
@@ -863,7 +863,7 @@ set mobileNo = @mobile_num , redeem_date = current_timestamp
 where voucherID = @voucher_id 
 
 update customer_account
-set point = point - @voucher_points
+set points = points - @voucher_points
 where mobileNo = @mobile_num
 end 
 else 

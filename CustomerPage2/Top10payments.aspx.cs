@@ -24,7 +24,6 @@ namespace Telecommunication_System.CustomerPage2
 
             if (!string.IsNullOrEmpty(Mobilenumber) && Mobilenumber.Length == 11)
             {
-                Response.Write(Mobilenumber);
                 ShowTop10Payments(Mobilenumber);
             }
             else

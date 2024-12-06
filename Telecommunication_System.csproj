@@ -105,7 +105,6 @@
     <Content Include="HomePage.aspx" />
     <Content Include="AdminPage2\LinkedToWallet.aspx" />
     <Content Include="Milestone 2 implementation -Final.sql" />
-    <Content Include="Test data.sql" />
     <Content Include="AdminPage2\ViewWalletDetails.aspx" />
     <Content Include="AdminPage2\ViewCashbackTransactions.aspx" />
     <Content Include="AdminPage2\ViewPaymentTransactions.aspx" />
