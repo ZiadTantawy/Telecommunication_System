@@ -57,24 +57,7 @@
          border-radius: 8px;
          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
      }
-      .styled-table {
-     width: 100%;
-     border-collapse: collapse;
-     margin: 30px 0;
-     }
-     .styled-table th, .styled-table td {
-         padding: 12px 20px;
-         text-align: center;
-         border: 1px solid #ddd;
-     }
-     .styled-table th {
-         background-color: #FF9800;
-         color: white;
-     }
-     .styled-table tr:nth-child(even) {
-         background-color: #f9f9f9;
-     }
-
+  
  </style>
 </head>
 <body>

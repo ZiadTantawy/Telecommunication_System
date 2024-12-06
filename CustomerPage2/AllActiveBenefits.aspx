@@ -4,8 +4,8 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title></title>
-         <style>
+    <title>All Active Benefits</title>
+    <style>
         body {
       font-family: Arial, sans-serif;
       background-color: #f4f4f4;
@@ -64,13 +64,14 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div class =" "header">
+        <div class ="header">
         <h1>All Active Benefits</h1>
        </div>
-        <div>
-        <asp:Button ID="btnBack" runat="server" Text="Back" OnClick="redirectBack" CssClass="button" />
+        <div class =v "container">
         <asp:GridView ID="GridAllActiveBenefits" CssClass="styled-table" runat="server" AutoGenerateColumns="true"></asp:GridView>
-        <asp:Label ID="lblMessage" runat="server" Text="" Visible="false"></asp:Label><br />
+        <asp:Label ID="lblMessage" runat="server" Text="" CssClass ="box" Visible="false"></asp:Label>
+        <asp:Button ID="btnBack" runat="server" Text="Back" OnClick="redirectBack" CssClass="button" />
+            <br />
     </div>
     </form>
 </body>

@@ -37,14 +37,14 @@
         <asp:Button ID="Logout" runat="server" Text="Logout" Onclick="AdminlogoutRedirect"/>
         <div class="dashboard-container">
             <h1>Customer Dashboard</h1>
-            <asp:Button ID="Cust1" runat="server" Text="Back to Customer Dashboard 1" onclick="CustDashboard1"/>
+            <asp:Button ID="Cust1" runat="server" Text="Back to Customer Dashboard 1" CssClass="dashboard-button"  onclick="CustDashboard1"/>
             <asp:Button ID="btnAllActiveBenefits" runat="server" Text="View All Active Benefits" CssClass="dashboard-button" OnClick="btnAllActiveBenefits_click" />
             <asp:Button ID="btnExtraPlanAmount" runat="server" Text="Calculate Extra Plan Amount" CssClass="dashboard-button" OnClick="btnExtraPlanAmount_click" />
             <asp:Button ID="btnHighestVoucher" runat="server" Text="View Highest Voucher" CssClass="dashboard-button" OnClick="btnHighestVoucher_click" />
             <asp:Button ID="btnRemPlanAmount" runat="server" Text="Calculate Remaining Plan Amount" CssClass="dashboard-button" OnClick="btnRemPlanAmount_click" />
             <asp:Button ID="btnTop10payments" runat="server" Text="Show Top 10 Payments" CssClass="dashboard-button" OnClick="btnTop10payments_click" />
             <asp:Button ID="btnUnresolvedTickets" runat="server" Text="View Unresolved Tickets" CssClass="dashboard-button" OnClick="btnUnresolvedTickets_click" />
-            <asp:Button ID="CustomerDashboard3" runat="server" Text="Customer Dashboard 3" onclick="CustDash3"/>
+            <asp:Button ID="CustomerDashboard3" runat="server" Text="Customer Dashboard 3" CssClass="dashboard-button" onclick="CustDash3"/>
         </div>
     </form>
 </body>
