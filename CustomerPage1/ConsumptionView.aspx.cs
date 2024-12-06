@@ -21,38 +21,38 @@ namespace Telecommunication_System.CustomerPage1
             string startDateText = txtstartDate.Text.Trim();
             string endDateText = txtendDate.Text.Trim();
 
-            // Validate subscription date and plan ID
+            
             if (string.IsNullOrWhiteSpace(planName) || string.IsNullOrWhiteSpace(startDateText) || string.IsNullOrWhiteSpace(endDateText))
             {
-                // Display error if inputs are missing
+                
                 Response.Write("<script>alert('Please provide Plan name and start and end dates.');</script>");
                 return;
             }
 
             DateTime startDate, endDate;
 
-            // Validate start date format
+            
             if (!DateTime.TryParse(startDateText, out startDate))
             {
                 Response.Write("<script>alert('Invalid start date format. Please use the format YYYY-MM-DD.');</script>");
                 return;
             }
 
-            // Validate end date format
+            
             if (!DateTime.TryParse(endDateText, out endDate))
             {
                 Response.Write("<script>alert('Invalid end date format. Please use the format YYYY-MM-DD.');</script>");
                 return;
             }
 
-            // Ensure start date is earlier than or equal to end date
+            
             if (startDate > endDate)
             {
                 Response.Write("<script>alert('Start date cannot be later than end date.');</script>");
                 return;
             }
 
-            // Call the method to bind data with the validated date and plan name
+            
             BindConsumptionData(planName, startDate, endDate);
         }
 
@@ -64,7 +64,7 @@ namespace Telecommunication_System.CustomerPage1
             {
                 using (SqlConnection conn = new SqlConnection(connstr))
                 {
-                    // Query to execute the function or stored procedure
+                    
                     SqlCommand cmd = new SqlCommand("SELECT * FROM Consumption(@Plan_name, @start_date, @end_date)", conn);
                     cmd.CommandType = CommandType.Text;
                     cmd.Parameters.AddWithValue("@Plan_name", planName);
@@ -77,7 +77,7 @@ namespace Telecommunication_System.CustomerPage1
                     {
                         tblPlanconsumption.Rows.Clear();
 
-                        // Create header row
+                        
                         TableRow headerRow = new TableRow();
                         for (int i = 0; i < rdr.FieldCount; i++)
                         {
@@ -87,7 +87,7 @@ namespace Telecommunication_System.CustomerPage1
                         }
                         tblPlanconsumption.Rows.Add(headerRow);
 
-                        // Add data rows
+                        
                         while (rdr.Read())
                         {
                             TableRow row = new TableRow();
@@ -104,7 +104,7 @@ namespace Telecommunication_System.CustomerPage1
             }
             catch (Exception ex)
             {
-                // Display error if any exception occurs
+                
                 Response.Redirect($"ErrorPage.aspx?message={Server.UrlEncode("An error occurred: " + ex.Message)}");
             }
         }

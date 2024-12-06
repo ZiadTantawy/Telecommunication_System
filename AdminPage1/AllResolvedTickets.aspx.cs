@@ -33,7 +33,7 @@ namespace Telecommunication_System
                     {
                         tblResolvedTickets.Rows.Clear();
 
-                        // Add header row
+                       
                         TableRow headerRow = new TableRow();
                         for (int i = 0; i < rdr.FieldCount; i++)
                         {
@@ -43,7 +43,7 @@ namespace Telecommunication_System
                         }
                         tblResolvedTickets.Rows.Add(headerRow);
 
-                        // Add data rows
+                        
                         while (rdr.Read())
                         {
                             TableRow row = new TableRow();

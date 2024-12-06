@@ -33,10 +33,10 @@ namespace Telecommunication_System.CustomerPage1
 
                     using (SqlDataReader rdr = cmd.ExecuteReader())
                     {
-                        // Clear existing rows in the table before adding new data
+                        
                         tblServicePlans.Rows.Clear();
 
-                        // Create header row
+                       
                         TableRow headerRow = new TableRow();
                         for (int i = 0; i < rdr.FieldCount; i++)
                         {
@@ -46,7 +46,7 @@ namespace Telecommunication_System.CustomerPage1
                         }
                         tblServicePlans.Rows.Add(headerRow);
 
-                        // Add data rows
+                        
                         while (rdr.Read())
                         {
                             TableRow row = new TableRow();
@@ -63,14 +63,14 @@ namespace Telecommunication_System.CustomerPage1
             }
             catch (Exception ex)
             {
-                // Handle the error, possibly by displaying a message
+                
                 Response.Write($"<script>alert('An error occurred: {ex.Message}');</script>");
             }
         }
 
         protected void redirectBack(object sender, EventArgs e)
         {
-            // Redirect to the customer dashboard
+            
             Response.Redirect("CustomerDashboard1.aspx");
         }
     }
