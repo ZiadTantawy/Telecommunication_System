@@ -45,7 +45,7 @@ namespace Telecommunication_System.CustomerPage2
                 {
                     SqlCommand cmd = new SqlCommand(proc, conn);
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@MobileNo", Mobilenumber);
+                    cmd.Parameters.AddWithValue("@mobile_num", Mobilenumber);
 
                     conn.Open();
                     object result = cmd.ExecuteScalar();

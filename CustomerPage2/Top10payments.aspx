@@ -15,6 +15,8 @@
             <br />
             <asp:GridView ID="GridViewTopPayments" runat="server" AutoGenerateColumns="true"></asp:GridView>
             <asp:Label ID="lblMessage" runat="server" Text=""  Visible="false"></asp:Label><br />
+            <asp:Button ID="Top10" runat="server" Text="Search" OnClick="checkid" />
+            <asp:Button ID="backbtn" runat="server" Text="Back" onclick="redirectBack"/>
         </div>
     </form>
 </body>

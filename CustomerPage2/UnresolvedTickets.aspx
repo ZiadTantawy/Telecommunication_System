@@ -24,6 +24,7 @@
             <label for="nationalID">National ID:</label>
             <asp:TextBox ID="NationalID" runat="server" CssClass="input-field" Placeholder="Enter National ID"></asp:TextBox>
             <br />
+            <asp:Button ID="search" runat="server" Text="Search" onclick="DisplayUnresolvedTickets"/>
             <asp:Button ID="btnBack" runat="server" Text="Back" OnClick="redirectBack" CssClass="button" />
             <br />
             <asp:Label ID="lblMessage" runat="server" Text="" Visible="false"></asp:Label>

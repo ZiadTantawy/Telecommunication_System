@@ -13,17 +13,18 @@ namespace Telecommunication_System.CustomerPage2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-             if (!IsPostBack)
+            if (!IsPostBack)
             {
-             
+
             }
         }
         protected void checkid(object sender, EventArgs e)
         {
-            string Mobilenumber = MobileNumber.Text; 
+            string Mobilenumber = MobileNumber.Text;
 
             if (!string.IsNullOrEmpty(Mobilenumber) && Mobilenumber.Length == 11)
             {
+                Response.Write(Mobilenumber);
                 ShowTop10Payments(Mobilenumber);
             }
             else
@@ -37,7 +38,7 @@ namespace Telecommunication_System.CustomerPage2
         {
 
             string connStr = System.Configuration.ConfigurationManager.ConnectionStrings["Telecom_Team_104"].ConnectionString;
-            string query = "Top_Successful_Payments";
+            string query = "dbo.Top_Successful_Payments";
 
             using (SqlConnection conn = new SqlConnection(connStr))
             {
@@ -46,7 +47,8 @@ namespace Telecommunication_System.CustomerPage2
                 {
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
-                        cmd.Parameters.AddWithValue("@MobileNo",Mobilenumber);
+                        cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@mobile_num", Mobilenumber);
                         conn.Open();
 
                         using (SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd))
@@ -54,12 +56,8 @@ namespace Telecommunication_System.CustomerPage2
                             DataTable dataTable = new DataTable();
                             dataAdapter.Fill(dataTable);
 
-
-
-
                             if (dataTable.Rows.Count > 0)
                             {
-
                                 GridViewTopPayments.DataSource = dataTable;
                                 GridViewTopPayments.DataBind();
                                 lblMessage.Visible = false;
@@ -82,10 +80,9 @@ namespace Telecommunication_System.CustomerPage2
                 }
             }
         }
-         protected void redirectBack(object sender, EventArgs e)
+        protected void redirectBack(object sender, EventArgs e)
         {
             Response.Redirect("CustomerDashboard2.aspx");
         }
     }
-    
 }

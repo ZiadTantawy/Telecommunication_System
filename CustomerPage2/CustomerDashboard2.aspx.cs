@@ -41,10 +41,18 @@ namespace Telecommunication_System.CustomerPage2
             {
                 Response.Redirect("UnresolvedTickets.aspx");
             }
-            protected void AdminlogoutRedirect(object sender, EventArgs e)
-            {
-                Response.Redirect("HomePage.aspx");
-                Session.Clear();
+        protected void AdminlogoutRedirect(object sender, EventArgs e)
+        {
+            Response.Redirect("HomePage.aspx");
+            Session.Clear();
+        }
+        protected void CustDashboard1(object sender, EventArgs e)
+        {
+            Response.Redirect("../CustomerPage1/CustomerDashboard1.aspx");
+        }
+        protected void CustDash3(object sender, EventArgs e)
+        {
+            Response.Redirect("../CustomerPage3/CostumerDashboard.aspx");
         }
 
 
