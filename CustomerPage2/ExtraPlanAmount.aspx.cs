@@ -13,13 +13,13 @@ namespace Telecommunication_System.CustomerPage2
         {
             if (!IsPostBack)
             {
-                checkinputs(sender,e);
+                checkinputs(sender, e);
             }
         }
 
         protected void checkinputs(object sender, EventArgs e)
         {
-            string Mobilenumber = MobileNumber.Text;  
+            string Mobilenumber = MobileNumber.Text;
             string planname = PlanName.Text;
 
             if (!string.IsNullOrEmpty(Mobilenumber) && Mobilenumber.Length == 11 && !string.IsNullOrEmpty(planname))
@@ -47,11 +47,11 @@ namespace Telecommunication_System.CustomerPage2
                     cmd.Parameters.AddWithValue("@plan_name", Planname);
 
                     conn.Open();
-                    object result = cmd.ExecuteScalar(); 
+                    object result = cmd.ExecuteScalar();
 
                     if (result != null && int.TryParse(result.ToString(), out int ExtraAmount))
                     {
-                        lblMessage.Text = $"Extra Amount: {ExtraAmount}"; 
+                        lblMessage.Text = $"Extra Amount: {ExtraAmount}";
                         lblMessage.Visible = true;
                     }
                     else
@@ -63,7 +63,7 @@ namespace Telecommunication_System.CustomerPage2
             }
             catch (Exception ex)
             {
-                lblMessage.Text = "An error occurred: "+ ex.Message;
+                lblMessage.Text = "An error occurred: " + ex.Message;
                 lblMessage.Visible = true;
             }
         }

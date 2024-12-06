@@ -24,6 +24,15 @@ namespace Telecommunication_System.CustomerPage2
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
+        /// Cust1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Cust1;
+
+        /// <summary>
         /// btnAllActiveBenefits control.
         /// </summary>
         /// <remarks>
@@ -76,5 +85,14 @@ namespace Telecommunication_System.CustomerPage2
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnUnresolvedTickets;
+
+        /// <summary>
+        /// CustomerDashboard3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button CustomerDashboard3;
     }
 }

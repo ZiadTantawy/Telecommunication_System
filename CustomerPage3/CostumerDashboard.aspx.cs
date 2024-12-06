@@ -39,5 +39,9 @@ namespace Telecommunication_System
         {
             Response.Redirect("RedeemVoucher.aspx");
         }
+        protected void CustDashboard2(object sender, EventArgs e)
+        {
+            Response.Redirect("../CustomerPage2/CustomerDashboard2.aspx");
+        }
     }
 }

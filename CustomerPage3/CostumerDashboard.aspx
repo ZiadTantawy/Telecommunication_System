@@ -23,6 +23,8 @@
             <asp:Button ID="RechargeBalance" runat="server" Text="Recharge Balance" OnClick="btnRechargeBalance"  />
             <br/>
             <asp:Button ID="RedeemVoucher" runat="server" Text="Redeem Voucher" OnClick="btnRedeemVoucher"  />
+            <br />
+            <asp:Button ID="CustDash2" runat="server" Text="Back to Customer Dashboard 2" onclick="CustDashboard2"/>
                         
         </div>
     </form>

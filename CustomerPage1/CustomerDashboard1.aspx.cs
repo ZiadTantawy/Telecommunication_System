@@ -9,7 +9,7 @@ namespace Telecommunication_System.CustomerPage1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            // Page load logic (if any)
+
         }
 
         protected void ServicePlans(object sender, EventArgs e)
@@ -37,10 +37,9 @@ namespace Telecommunication_System.CustomerPage1
             Response.Redirect("CashbackView.aspx");
         }
 
-        // Redirect to another dashboard (Dashboard 2)
         protected void RedirectToDashboard2(object sender, EventArgs e)
         {
-            Response.Redirect("../CustomerPage3/CostumerDashboard.aspx"); // Adjust this if the URL or page name is different
+            Response.Redirect("../CustomerPage2/CustomerDashboard2.aspx"); 
         }
     }
 }

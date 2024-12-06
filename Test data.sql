@@ -15,7 +15,7 @@ VALUES
 
 
 --Customer Account
-INSERT INTO customer_account (mobileNo, pass, balance, account_type, start_date, status, point, nationalID)
+INSERT INTO customer_account (mobileNo, pass, balance, account_type, start_date, status, points, nationalID)
 VALUES 
 ('12345678901', 'pass123', 50.0, 'Prepaid', '2022-01-01', 'active', 1000, 1),
 ('23456789012', 'pass234', 75.5, 'Post Paid', '2021-06-15', 'active', 2000, 2),
@@ -305,6 +305,8 @@ SELECT * FROM Payment WHERE mobileNo = '12345678901';
 exec Redeem_voucher_points @MobileNo='12345678901',@voucher_id=1
 SELECT * FROM Customer_Account
 SELECT * FROM Voucher
+
+SELECT dbo.Extra_plan_amount('12345678901', 'Basic Plan') AS ExtraAmount
 
 --___________________________________________________________________________________________
 select * from Customer_profile

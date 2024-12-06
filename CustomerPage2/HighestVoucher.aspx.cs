@@ -14,13 +14,14 @@ namespace Telecommunication_System.CustomerPage2
         {
             if (!IsPostBack)
             {
-                checkinput(sender, e);  // Correct the method call in Page_Load (this line is not strictly needed)
+                // Any initialization logic can go here
             }
         }
 
+        // Corrected the method signature to match button click event handler
         protected void checkinput(object sender, EventArgs e)
         {
-            string Mobilenumber = Mobile_Number.Text;
+            string Mobilenumber = Mobile_Number.Text; // Corrected control name
 
             if (!string.IsNullOrEmpty(Mobilenumber) && Mobilenumber.Length == 11)
             {
@@ -44,7 +45,7 @@ namespace Telecommunication_System.CustomerPage2
                 {
                     SqlCommand cmd = new SqlCommand(proc, conn);
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@mobile_num", Mobilenumber);
+                    cmd.Parameters.AddWithValue("@MobileNo", Mobilenumber);
 
                     conn.Open();
                     object result = cmd.ExecuteScalar();
@@ -62,8 +63,9 @@ namespace Telecommunication_System.CustomerPage2
             }
             catch (Exception ex)
             {
-                lblMessage.Text = "An error occurred. Please try again later."; // Updated error message
+                lblMessage.Text = "An error occurred: " + ex.Message;
                 lblMessage.Visible = true;
+
             }
         }
 

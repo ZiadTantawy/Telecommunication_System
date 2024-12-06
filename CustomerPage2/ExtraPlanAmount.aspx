@@ -27,7 +27,7 @@
             <label for="PlanName">Plan Name:</label>
             <asp:TextBox ID="PlanName" runat="server" CssClass="input-field" Placeholder="Enter Plan Name"></asp:TextBox>
             <br />
-            <asp:Button ID="btnSearch" runat="server" Text="Search" CssClass="button" OnClick="btnSearch_Click" />
+            <asp:Button ID="btnSearch" runat="server" Text="Search" CssClass="button" OnClick="checkinputs" />
             <asp:Button ID="btnBack" runat="server" Text="Back" CssClass="button" OnClick="redirectBack" />
             <br />
             <asp:Label ID="lblMessage" runat="server" Text="" Visible="false"></asp:Label>

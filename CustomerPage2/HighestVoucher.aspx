@@ -21,7 +21,7 @@
     <form id="form1" runat="server">
         <h1>Highest Voucher</h1>
         <div>
-            <label for="Mobile number">Mobile Number:</label>
+            <label for="Mobile_Number">Mobile Number:</label>
             <asp:TextBox ID="Mobile_Number" runat="server" CssClass="input-field" Placeholder="Enter Mobile Number"></asp:TextBox>
             <br />
             <asp:Button ID="btnSearch" runat="server" Text="Search" CssClass="button" OnClick="checkinput" />
