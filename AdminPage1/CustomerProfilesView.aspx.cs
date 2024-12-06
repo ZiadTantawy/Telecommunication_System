@@ -32,7 +32,7 @@ namespace Telecommunication_System
 
                     using (SqlDataReader rdr = cmd.ExecuteReader())
                     {
-                        // Clear existing rows in the table before adding new data
+                        
                         tblCustomerAccounts.Rows.Clear();
 
                         TableRow headerRow = new TableRow();
@@ -44,7 +44,7 @@ namespace Telecommunication_System
                         }
                         tblCustomerAccounts.Rows.Add(headerRow);
 
-                        // Add data rows
+                        
                         while (rdr.Read())
                         {
                             TableRow row = new TableRow();

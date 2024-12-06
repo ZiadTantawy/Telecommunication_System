@@ -20,14 +20,14 @@ namespace Telecommunication_System.CustomerPage1
         {
             string nationalID = txtNid.Text.Trim();
 
-            // Validate the National ID
+            
             if (string.IsNullOrWhiteSpace(nationalID) || !int.TryParse(nationalID, out _))
             {
                 Response.Write("<script>alert('Please enter a valid National ID.');</script>");
                 return;
             }
 
-            // Call the method to fetch and display cashback details
+            
             BindCashbackDetails(nationalID);
         }
 
@@ -39,7 +39,7 @@ namespace Telecommunication_System.CustomerPage1
             {
                 using (SqlConnection conn = new SqlConnection(connstr))
                 {
-                    // Query to execute the function
+                    
                     string query = "SELECT * FROM dbo.Cashback_Wallet_Customer(@NID)";
                     SqlCommand cmd = new SqlCommand(query, conn);
                     cmd.CommandType = CommandType.Text;
@@ -51,7 +51,7 @@ namespace Telecommunication_System.CustomerPage1
                     {
                         tblCashback.Rows.Clear();
 
-                        // Create header row
+                        
                         TableRow headerRow = new TableRow();
                         for (int i = 0; i < rdr.FieldCount; i++)
                         {
@@ -61,7 +61,7 @@ namespace Telecommunication_System.CustomerPage1
                         }
                         tblCashback.Rows.Add(headerRow);
 
-                        // Add data rows
+                        
                         while (rdr.Read())
                         {
                             TableRow row = new TableRow();
@@ -78,7 +78,7 @@ namespace Telecommunication_System.CustomerPage1
             }
             catch (Exception ex)
             {
-                // Redirect to an error page if an exception occurs
+                
                 Response.Redirect($"ErrorPage.aspx?message={Server.UrlEncode("An error occurred: " + ex.Message)}");
             }
         }

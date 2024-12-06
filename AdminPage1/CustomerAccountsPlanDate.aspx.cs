@@ -18,17 +18,17 @@ namespace Telecommunication_System.AdminPage1
             string subscriptionDate = txtDate.Text.Trim();
             string planID = txtPlanID.Text.Trim();
 
-            // Validate subscription date and plan ID
+            
             if (string.IsNullOrWhiteSpace(subscriptionDate) || string.IsNullOrWhiteSpace(planID))
             {
-                // Display error if inputs are missing
+                
                 Response.Write("<script>alert('Please provide both subscription date and plan ID.');</script>");
                 return;
             }
 
             DateTime parsedDate;
 
-            // Validate if the date is in correct format
+            
             if (!DateTime.TryParse(subscriptionDate, out parsedDate))
             {
                 Response.Write("<script>alert('Invalid date format. Please use the format YYYY-MM-DD.');</script>");
@@ -57,7 +57,7 @@ namespace Telecommunication_System.AdminPage1
                     {
                         tblCustomerAccounts.Rows.Clear();
 
-                        // Create header row
+                        
                         TableRow headerRow = new TableRow();
                         for (int i = 0; i < rdr.FieldCount; i++)
                         {
@@ -67,7 +67,7 @@ namespace Telecommunication_System.AdminPage1
                         }
                         tblCustomerAccounts.Rows.Add(headerRow);
 
-                        // Add data rows
+                        
                         while (rdr.Read())
                         {
                             TableRow row = new TableRow();

@@ -11,7 +11,7 @@ namespace Telecommunication_System.AdminPage1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            // Code that runs when the page is loaded
+           
         }
 
         protected void btnSearch_Click(object sender, EventArgs e)
@@ -20,13 +20,13 @@ namespace Telecommunication_System.AdminPage1
 
             if (string.IsNullOrEmpty(mobileNumber))
             {
-                // Show a message if the mobile number is not entered
+                
                 lblStatus.Text = "Please enter a valid mobile number.";
                 lblStatus.ForeColor = System.Drawing.Color.Red;
                 return;
             }
 
-            // Bind SMS offers data for the given mobile number
+            
             BindSMSOffersData(mobileNumber);
         }
 
@@ -38,7 +38,7 @@ namespace Telecommunication_System.AdminPage1
             {
                 using (SqlConnection conn = new SqlConnection(connstr))
                 {
-                    // Modify the command to call the TVF like a SELECT query
+                    
                     SqlCommand cmd = new SqlCommand("SELECT * FROM dbo.Account_SMS_Offers(@mobile_num)", conn);
                     cmd.CommandType = CommandType.Text;
                     cmd.Parameters.AddWithValue("@mobile_num", mobileNumber);
@@ -47,10 +47,10 @@ namespace Telecommunication_System.AdminPage1
 
                     using (SqlDataReader rdr = cmd.ExecuteReader())
                     {
-                        // Clear any existing rows in the table
+                        
                         tblSMSOffers.Rows.Clear();
 
-                        // Create header row
+                        
                         TableRow headerRow = new TableRow();
                         for (int i = 0; i < rdr.FieldCount; i++)
                         {
@@ -60,7 +60,7 @@ namespace Telecommunication_System.AdminPage1
                         }
                         tblSMSOffers.Rows.Add(headerRow);
 
-                        // Add data rows
+                        
                         while (rdr.Read())
                         {
                             TableRow row = new TableRow();
@@ -77,7 +77,7 @@ namespace Telecommunication_System.AdminPage1
             }
             catch (Exception ex)
             {
-                // Display error message
+                
                 lblStatus.Text = "An error occurred: " + ex.Message;
                 lblStatus.ForeColor = System.Drawing.Color.Red;
             }
@@ -86,7 +86,7 @@ namespace Telecommunication_System.AdminPage1
 
         protected void redirectBack(object sender, EventArgs e)
         {
-            Response.Redirect("AdminDashboard1.aspx"); // Navigate back to admin dashboard
+            Response.Redirect("AdminDashboard1.aspx"); 
         }
     }
 }

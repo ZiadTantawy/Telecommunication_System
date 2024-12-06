@@ -32,10 +32,10 @@ namespace Telecommunication_System.AdminPage1
 
                     using (SqlDataReader rdr = cmd.ExecuteReader())
                     {
-                        // Clear existing rows
+                        
                         tblAccountPlans.Rows.Clear();
 
-                        // Create table header
+                        
                         TableRow headerRow = new TableRow();
                         for (int i = 0; i < rdr.FieldCount; i++)
                         {
@@ -45,7 +45,7 @@ namespace Telecommunication_System.AdminPage1
                         }
                         tblAccountPlans.Rows.Add(headerRow);
 
-                        // Add data rows
+                        
                         while (rdr.Read())
                         {
                             TableRow row = new TableRow();
