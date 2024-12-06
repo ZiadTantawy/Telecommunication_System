@@ -43,8 +43,11 @@
         .button:hover {
             background-color: #45a049;
         }
-        .center{
+
+        .center {
+            display: flex;
             justify-content: center;
+            gap: 10px;
         }
     </style>
 </head>
@@ -52,9 +55,9 @@
     <form id="form1" runat="server">
         <div>
             <h1>Telecom System</h1>
-            <div cssclass="center">
-            <asp:Button ID="AdminLogin" runat="server" Text="Admin Login" CssClass="button" OnClick="AdminLoginBtn" />
-            <asp:Button ID="CustomerLogin" runat="server" Text="Customer Login" CssClass="button" OnClick="CustomerLoginBtn" />
+            <div class="center">
+                <asp:Button ID="AdminLogin" runat="server" Text="Admin Login" CssClass="button" OnClick="AdminLoginBtn" />
+                <asp:Button ID="CustomerLogin" runat="server" Text="Customer Login" CssClass="button" OnClick="CustomerLoginBtn" />
             </div>
         </div>
     </form>
