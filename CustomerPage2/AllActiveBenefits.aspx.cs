@@ -32,8 +32,8 @@ namespace Telecommunication_System.CustomerPage2
 
                     if (dataTable.Rows.Count > 0)
                     {
-                        GridAllActiveaBenefits.DataSource = dataTable;
-                        GridAllActiveaBenefits.DataBind();
+                        GridAllActiveBenefits.DataSource = dataTable;
+                        GridAllActiveBenefits.DataBind();
                     }
                     else
                     {

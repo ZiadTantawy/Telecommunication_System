@@ -12,24 +12,23 @@ namespace Telecommunication_System.CustomerPage2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack) 
+            if (!IsPostBack)
             {
-                checkinput();
-               
+                checkinput(sender, e);  // Correct the method call in Page_Load (this line is not strictly needed)
             }
         }
+
         protected void checkinput(object sender, EventArgs e)
         {
-    
-            string Mobilenumber = MobileNumber.Text; 
+            string Mobilenumber = Mobile_Number.Text;
 
             if (!string.IsNullOrEmpty(Mobilenumber) && Mobilenumber.Length == 11)
             {
-                GetHighestVoucher(Mobilenumber); 
+                GetHighestVoucher(Mobilenumber);
             }
             else
             {
-                lblMessage.Text = "invalid mobile number."; 
+                lblMessage.Text = "Invalid mobile number.";
                 lblMessage.Visible = true;
             }
         }
@@ -53,26 +52,24 @@ namespace Telecommunication_System.CustomerPage2
                     if (result != null)
                     {
                         lblMessage.Text = $"Highest Voucher ID: {result.ToString()}";
-
                     }
                     else
                     {
                         lblMessage.Text = "No vouchers found for this mobile number.";
-
                     }
                     lblMessage.Visible = true;
                 }
             }
             catch (Exception ex)
             {
-                lblMessage.Text = "An error occurred: " + ex.Message;
+                lblMessage.Text = "An error occurred. Please try again later."; // Updated error message
                 lblMessage.Visible = true;
             }
         }
+
         protected void redirectBack(object sender, EventArgs e)
         {
             Response.Redirect("CustomerDashboard2.aspx");
         }
-
     }
 }

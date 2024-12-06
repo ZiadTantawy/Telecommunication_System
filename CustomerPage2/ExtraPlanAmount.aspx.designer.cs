@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Telecommunication_System.AdminPage1
+namespace Telecommunication_System.CustomerPage2
 {
 
 
@@ -33,13 +33,13 @@ namespace Telecommunication_System.AdminPage1
         protected global::System.Web.UI.WebControls.TextBox MobileNumber;
 
         /// <summary>
-        /// Plann=Name control.
+        /// PlanName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Plann = Name;
+        protected global::System.Web.UI.WebControls.TextBox PlanName;
 
         /// <summary>
         /// btnSearch control.

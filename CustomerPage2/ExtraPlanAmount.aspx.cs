@@ -13,7 +13,7 @@ namespace Telecommunication_System.CustomerPage2
         {
             if (!IsPostBack)
             {
-                checkinputs();
+                checkinputs(sender,e);
             }
         }
 
@@ -22,9 +22,9 @@ namespace Telecommunication_System.CustomerPage2
             string Mobilenumber = MobileNumber.Text;  
             string planname = PlanName.Text;
 
-            if (!string.IsNullOrEmpty(Mobilenumber) && Mobilenumber.Length == 11 && !string.IsNullOrEmpty(Planname))
+            if (!string.IsNullOrEmpty(Mobilenumber) && Mobilenumber.Length == 11 && !string.IsNullOrEmpty(planname))
             {
-                ShowExtraAmount(Mobilenumber, Planname);
+                ShowExtraAmount(Mobilenumber, planname);
             }
             else
             {

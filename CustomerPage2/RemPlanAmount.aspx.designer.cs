@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Telecommunication_System.AdminPage1
+namespace Telecommunication_System.CustomerPage2
 {
 
 

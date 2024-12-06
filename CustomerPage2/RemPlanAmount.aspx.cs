@@ -11,10 +11,7 @@ namespace Telecommunication_System.CustomerPage2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-                checkinputs();
-            }
+            // No need to call checkinputs() here
         }
 
         protected void checkinputs(object sender, EventArgs e)
@@ -36,7 +33,7 @@ namespace Telecommunication_System.CustomerPage2
         private void ShowRemainingAmount(string Mobilenumber, string Planname)
         {
             string connStr = WebConfigurationManager.ConnectionStrings["Telecom_Team_104"].ToString();
-            string query = "SELECT * From dbo.Remaining_plan_amount(@mobile_num, @plan_name) ";
+            string query = "SELECT dbo.Remaining_plan_amount(@mobile_num, @plan_name)"; // Fixed query
 
             try
             {
@@ -47,7 +44,7 @@ namespace Telecommunication_System.CustomerPage2
                     cmd.Parameters.AddWithValue("@plan_name", Planname);
 
                     conn.Open();
-                    object result = cmd.ExecuteScalar(); 
+                    object result = cmd.ExecuteScalar();
 
                     if (result != null && int.TryParse(result.ToString(), out int remainingAmount))
                     {
@@ -55,17 +52,18 @@ namespace Telecommunication_System.CustomerPage2
                     }
                     else
                     {
-                        lblMessage.Text = "No data found for the given mobile number and plan.";   
+                        lblMessage.Text = "No data found for the given mobile number and plan.";
                     }
                     lblMessage.Visible = true;
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                lblMessage.Text = "An error occurred:" + ex.Message;
+                lblMessage.Text = "An error occurred. Please try again later."; // Fixed error handling
                 lblMessage.Visible = true;
             }
         }
+
         protected void redirectBack(object sender, EventArgs e)
         {
             Response.Redirect("CustomerDashboard2.aspx");

@@ -1,11 +1,10 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="RemPlanAmount.aspx.cs" Inherits="Telecommunication_System.AdminPage1.RemPlanAmount" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="RemPlanAmount.aspx.cs" Inherits="Telecommunication_System.CustomerPage2.RemPlanAmount" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Remaining Plan Amount</title>
     <style>
-      
         .button {
             background-color: #4CAF50;
             color: white;
@@ -28,14 +27,12 @@
             <label for="Planname">Plan Name:</label>
             <asp:TextBox ID="PlanName" runat="server" CssClass="input-field" Placeholder="Enter Plan Name"></asp:TextBox>
             <br />
-            <asp:Button ID="btnSearch" runat="server" Text="Search" CssClass="button" OnClick="btnSearch_Click" />
+            <asp:Button ID="btnSearch" runat="server" Text="Search" CssClass="button" OnClick="checkinputs" />
             <asp:Button ID="btnBack" runat="server" Text="Back" CssClass="button" OnClick="redirectBack" />
             <br />
         </div>
         <div>
             <asp:Label ID="lblMessage" runat="server" Text="" Visible="false"></asp:Label>
- 
-            </asp:Table>
         </div>
     </form>
 </body>
