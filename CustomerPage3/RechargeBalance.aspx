@@ -5,52 +5,84 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Recharge Balance</title>
-    <style>
-    .dashboard-container {
-        text-align: center;
-        margin-top: 50px;
+     <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
     }
-    .dashboard-container h1 {
-        font-size: 36px;
-        color: #333;
-    }
-    .dashboard-button {
-        display: block;
-        width: 100%;
-        margin: 15px auto;
-        padding: 10px 20px;
-        font-size: 16px;
-        color: white;
+
+    .header {
         background-color: #4CAF50;
-        border: none;
-        cursor: pointer;
-        border-radius: 5px;
+        color: white;
+        padding: 10px;
         text-align: center;
     }
-    .dashboard-button:hover {
+
+    .container {
+        max-width: 800px;
+        margin: 30px auto;
+        padding: 20px;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .input-field {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+
+    .button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100%;
+    }
+
+    .button:hover {
         background-color: #45a049;
     }
+
+    .box {
+        padding: 15px;
+        margin: 20px 0;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+
 </style>
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
+        <div class ="header">
             <h1>
                 Recharge Balance
             </h1>
-            Enter Amount to Recharge
+            </div>
+        <br />
+            Enter Amount to Recharge:
             <br />
-            <asp:TextBox ID="txtAmount" runat="server" placeholder="Amount"></asp:TextBox>
+            <asp:TextBox ID="txtAmount" runat="server" CssClass="input-field" placeholder="Amount"></asp:TextBox>
             <br />                 
-            Choose Payment Method            
+            Choose Payment Method :
+        <br />
             <br />
-            <asp:RadioButton ID="rbtnCash" runat="server" GroupName="PaymentMethod" Text="Cash" Checked="true" />
+            <asp:RadioButton ID="rbtnCash" runat="server"  GroupName="PaymentMethod" Text="Cash" Checked="true" />
             <asp:RadioButton ID="rbtnCredit" runat="server" GroupName="PaymentMethod" Text="Credit" />
             <br />
-            <asp:Button ID="btnRecharge" runat="server" Text ="Recharge Balance" OnClick ="Recharge" />
-             <asp:Button ID="btnBack" runat="server" Text="Back" OnClick="redirectBack" CssClass="button" />
+            <asp:Button ID="btnRecharge" runat="server" CssClass="button" Text ="Recharge Balance" OnClick ="Recharge" />
+             <asp:Button ID="btnBack" runat="server" Text="Back" CssClass="button" OnClick="redirectBack"  />
             <br />
-            <asp:Label ID ="lblMessage" runat="server"></asp:Label>
+            <asp:Label ID ="lblMessage" CssClass="box" runat="server"></asp:Label>
         </div>
     </form>
 </body>

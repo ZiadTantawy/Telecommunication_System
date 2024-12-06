@@ -60,6 +60,12 @@
      .styled-table tr:nth-child(even) {
          background-color: #f9f9f9;
      }
+      .box {
+     padding: 15px;
+     margin: 20px 0;
+     border-radius: 8px;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ }
 </style>
 </head>
 <body>
@@ -67,11 +73,11 @@
         <div class ="header">
         <h1>All Active Benefits</h1>
        </div>
-        <div class =v "container">
+        <div class = "container">
         <asp:GridView ID="GridAllActiveBenefits" CssClass="styled-table" runat="server" AutoGenerateColumns="true"></asp:GridView>
         <asp:Label ID="lblMessage" runat="server" Text="" CssClass ="box" Visible="false"></asp:Label>
         <asp:Button ID="btnBack" runat="server" Text="Back" OnClick="redirectBack" CssClass="button" />
-            <br />
+            
     </div>
     </form>
 </body>

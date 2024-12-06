@@ -5,75 +5,115 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Renew Service Plan</title>
-    <style>
-    .dashboard-container {
-        text-align: center;
-        margin-top: 50px;
+       <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
     }
-    .dashboard-container h1 {
-        font-size: 36px;
-        color: #333;
-    }
-    .dashboard-button {
-        display: block;
-        width: 100%;
-        margin: 15px auto;
-        padding: 10px 20px;
-        font-size: 16px;
-        color: white;
+
+    .header {
         background-color: #4CAF50;
-        border: none;
-        cursor: pointer;
-        border-radius: 5px;
+        color: white;
+        padding: 10px;
         text-align: center;
     }
-    .dashboard-button:hover {
+
+    .container {
+        max-width: 800px;
+        margin: 30px auto;
+        padding: 20px;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .input-field {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+
+    .button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100%;
+    }
+
+    .button:hover {
         background-color: #45a049;
     }
+
+    .box {
+        padding: 15px;
+        margin: 20px 0;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+
 </style>
 </head>
 <body>
     <form id="form1" runat="server">
-        <h1>Renew Service Plan</h1>
-        <div>
-            Enter Payment Amount
+        <div class ="header">
+            <h1>
+             Renew Service Plan</h1>
+        </div>
+        <div class="container">
+            Enter Payment Amount:
             <br />
             <asp:TextBox 
                  ID="PaymentAmount" 
                  runat="server" 
+                  CssClass="input-field"
                  Placeholder="Amount">
+              
             </asp:TextBox>
             <br />
-            Choose Payment Method
-            <br />
-            <asp:RadioButton 
-                ID="rbtnCash" 
-                runat="server" 
-                GroupName="PaymentMethod" 
-                Text="Cash" 
-                Checked="true" />
-            <asp:RadioButton 
-                ID="rbtnCredit" 
-                runat="server" 
-                GroupName="PaymentMethod" 
-                Text="Credit" />
-            <br />
+           
             Enter Plan ID
             <br />
             <asp:TextBox 
                  ID="PlanID" 
+                  CssClass="input-field"
                  runat="server" 
                  Placeholder="Plan ID">
             </asp:TextBox>
+            <br />
+            <br />
+             Choose Payment Method:
+             <br />
+            <br />
+             <asp:RadioButton 
+                 ID="rbtnCash" 
+                 runat="server" 
+                 GroupName="PaymentMethod" 
+                 Text="Cash" 
+                 Checked="true" />
+             <asp:RadioButton 
+                 ID="rbtnCredit" 
+                 runat="server" 
+                 GroupName="PaymentMethod" 
+                 Text="Credit" />
+             <br />
             <br />
             <asp:Button 
                 ID="btnRenew" 
                 runat="server" 
                 Text="Renew" 
+                CssClass="button"
                 OnClick="Renew" />
              <asp:Button ID="btnBack" runat="server" Text="Back" OnClick="redirectBack" CssClass="button" />
             <br />
-            <asp:Label ID="lblMessage" runat="server"></asp:Label>
+            <asp:Label ID="lblMessage" CssClass="box" runat="server"></asp:Label>
         </div>
     </form>
 </body>

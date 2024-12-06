@@ -5,45 +5,86 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Payment Cashback</title>
-    <style>
-    .dashboard-container {
-        text-align: center;
-        margin-top: 50px;
-    }
-    .dashboard-container h1 {
-        font-size: 36px;
-        color: #333;
-    }
-    .dashboard-button {
-        display: block;
-        width: 100%;
-        margin: 15px auto;
-        padding: 10px 20px;
-        font-size: 16px;
-        color: white;
-        background-color: #4CAF50;
-        border: none;
-        cursor: pointer;
-        border-radius: 5px;
-        text-align: center;
-    }
-    .dashboard-button:hover {
-        background-color: #45a049;
-    }
+      <style>
+        body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      }
+
+      .header {
+          background-color: #4CAF50;
+          color: white;
+          padding: 10px;
+          text-align: center;
+      }
+
+      .container {
+          max-width: 800px;
+          margin: 30px auto;
+          padding: 20px;
+          background-color: white;
+          border-radius: 8px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+           .button {
+         background-color: #4CAF50;
+         color: white;
+         padding: 10px 20px;
+         border: none;
+         border-radius: 4px;
+         cursor: pointer;
+         width: 100%;
+     }
+
+     .button:hover {
+         background-color: #45a049;
+     }
+
+
+      styled-table {
+         width: 100%;
+         border-collapse: collapse;
+         margin: 30px 0;
+      }
+     .styled-table th, .styled-table td {
+         padding: 12px 20px;
+         text-align: center;
+         border: 1px solid #ddd;
+     }
+     .styled-table th {
+         background-color: #FF9800;
+         color: white;
+     }
+     .styled-table tr:nth-child(even) {
+         background-color: #f9f9f9;
+     }
+      .box {
+     padding: 15px;
+     margin: 20px 0;
+     border-radius: 8px;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ }
 </style>
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
+         <div class ="header">
+      
             <h1>Calculate Cashback Amount according to a a certain payment transaction of a specified benefit</h1>
-            <asp:TextBox ID="PaymentID" runat="server" Placeholder="Payment ID"></asp:TextBox>
-            <br/>
-            <asp:TextBox ID="BenefitID" runat="server" Placeholder="Benefit ID"></asp:TextBox>
-            <br />
-            <asp:Button ID="btnRetrive" runat="server" Text="Retrive Cashback Amount" OnClick="Retrive" />
-            <br />
-             <asp:Button ID="btnBack" runat="server" Text="Back" OnClick="redirectBack" CssClass="button" />
-            <br />
+             </div>
+             <div class = "container">
+            <label for="PaymentID"> Payment ID:</label>
+            <asp:TextBox ID="PaymentID" runat="server" CssClass="input-field"  Placeholder="Enter Payment ID"></asp:TextBox>
+              <br />
+            <label for="BenefitID"> Benefit ID:</label>
+            <asp:TextBox ID="BenefitID" runat="server" CssClass="input-field" Placeholder="Enter Benefit ID"></asp:TextBox>
+           <br />
+            <asp:Button ID="btnRetrive" runat="server" CssClass="button" Text="Retrive Cashback Amount" OnClick="Retrive" />
+           
+             <asp:Button ID="btnBack" runat="server" CssClass="button" Text="Back" OnClick="redirectBack"  />
+            
             <asp:Label ID="lblMessage" runat="server"></asp:Label>
         </div>
     </form>
