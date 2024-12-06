@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Customer Dashboard</title>
+    <title>Customer Dashboard 2 </title>
     <style>
         .dashboard-container {
             text-align: center;
@@ -17,7 +17,6 @@
         .dashboard-button {
             display: block;
             width: 100%;
-            margin: 15px auto;
             padding: 10px 20px;
             font-size: 16px;
             color: white;

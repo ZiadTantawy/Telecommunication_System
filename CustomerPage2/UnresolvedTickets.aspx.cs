@@ -23,7 +23,7 @@ namespace Telecommunication_System.CustomerPage2
 
             if (!string.IsNullOrEmpty(nationalID))
             {
-                ShowTicketCount(nationalID); 
+                TicketCount(nationalID); 
             }
             else
             {
@@ -32,7 +32,7 @@ namespace Telecommunication_System.CustomerPage2
             }
         }
 
-        private void ShowTicketCount(string nationalID)
+        private void TicketCount(string nationalID)
         {
             string connStr = WebConfigurationManager.ConnectionStrings["Telecom_Team_104"].ToString();
             string storedProcedure = "Ticket_Account_Customer"; 
