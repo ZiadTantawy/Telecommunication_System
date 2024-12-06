@@ -14,32 +14,32 @@ namespace Telecommunication_System.CustomerPage1
         {
             if (!IsPostBack)
             {
-                // Check if the mobile number is in session
+                
                 if (Session["MobileNumber"] != null)
                 {
-                    // Get the mobile number from session
+                    
                     string mobileNo = Session["MobileNumber"].ToString();
 
-                    // Display the mobile number on the page
+                   
                     lblMobileNumber.Text = mobileNo;
 
-                    // Clear the table on initial page load
+                    
                     tblMonthlyUsage.Rows.Clear();
                 }
                 else
                 {
-                    // Handle the case where the session mobile number is not available
-                    Response.Redirect("LoginPage.aspx"); // Redirect to login if the session is invalid
+                    
+                    Response.Redirect("LoginPage.aspx"); 
                 }
             }
         }
 
         protected void btnSearch_Click(object sender, EventArgs e)
         {
-            // Get the mobile number from session
+            
             string mobileNo = Session["MobileNumber"].ToString();
 
-            // Call the method to fetch and display monthly usage
+            
             BindMonthlyUsage(mobileNo);
         }
 
@@ -51,18 +51,18 @@ namespace Telecommunication_System.CustomerPage1
             {
                 using (SqlConnection conn = new SqlConnection(connstr))
                 {
-                    // Use the SQL function to fetch monthly usage
+                    
                     SqlCommand cmd = new SqlCommand("SELECT * FROM Usage_Plan_CurrentMonth(@mobile_num)", conn);
-                    cmd.CommandType = CommandType.Text; // SQL functions are called as text
+                    cmd.CommandType = CommandType.Text; 
                     cmd.Parameters.AddWithValue("@mobile_num", mobileNo);
 
                     conn.Open();
 
                     using (SqlDataReader rdr = cmd.ExecuteReader())
                     {
-                        tblMonthlyUsage.Rows.Clear(); // Clear previous data
+                        tblMonthlyUsage.Rows.Clear(); 
 
-                        // Create header row
+                        
                         TableRow headerRow = new TableRow();
                         for (int i = 0; i < rdr.FieldCount; i++)
                         {
@@ -72,7 +72,7 @@ namespace Telecommunication_System.CustomerPage1
                         }
                         tblMonthlyUsage.Rows.Add(headerRow);
 
-                        // Add data rows
+                       
                         while (rdr.Read())
                         {
                             TableRow row = new TableRow();
@@ -89,14 +89,14 @@ namespace Telecommunication_System.CustomerPage1
             }
             catch (Exception ex)
             {
-                // Redirect to an error page if an exception occurs
+                
                 Response.Redirect($"ErrorPage.aspx?message={Server.UrlEncode("An error occurred: " + ex.Message)}");
             }
         }
 
         protected void redirectBack(object sender, EventArgs e)
         {
-            // Redirect to the customer dashboard
+            
             Response.Redirect("CustomerDashboard1.aspx");
         }
     }

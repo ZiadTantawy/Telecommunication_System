@@ -18,7 +18,7 @@ namespace Telecommunication_System.AdminPage1
             string mobileNumber = txtMobileNumber.Text.Trim();
             string planIdText = txtPlanID.Text.Trim();
 
-            // Validate inputs
+            
             if (string.IsNullOrWhiteSpace(mobileNumber) || string.IsNullOrWhiteSpace(planIdText))
             {
                 lblStatus.Text = "Please provide both mobile number and plan ID.";
@@ -28,7 +28,7 @@ namespace Telecommunication_System.AdminPage1
 
             int planId;
 
-            // Validate plan ID
+            
             if (!int.TryParse(planIdText, out planId))
             {
                 lblStatus.Text = "Invalid plan ID.";
@@ -36,7 +36,7 @@ namespace Telecommunication_System.AdminPage1
                 return;
             }
 
-            // Call the method to remove benefits
+            
             RemoveBenefits(mobileNumber, planId);
         }
 
@@ -48,7 +48,7 @@ namespace Telecommunication_System.AdminPage1
             {
                 using (SqlConnection conn = new SqlConnection(connstr))
                 {
-                    // Use the Benefits_Account stored procedure
+                    
                     SqlCommand cmd = new SqlCommand("Benefits_Account", conn);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@mobile_num", mobileNumber);
@@ -70,7 +70,7 @@ namespace Telecommunication_System.AdminPage1
 
         protected void redirectBack(object sender, EventArgs e)
         {
-            Response.Redirect("AdminDashboard1.aspx"); // Navigate back to admin dashboard or any page you want
+            Response.Redirect("AdminDashboard1.aspx"); 
         }
     }
 }

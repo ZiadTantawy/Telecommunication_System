@@ -18,25 +18,25 @@ namespace Telecommunication_System.AdminPage1
             string mobileNumber = txtMobileNumber.Text.Trim();
             string startDateText = txtStartDate.Text.Trim();
 
-            // Validate inputs
+            
             if (string.IsNullOrWhiteSpace(mobileNumber) || string.IsNullOrWhiteSpace(startDateText))
             {
-                // Show error if inputs are missing
+                
                 Response.Write("<script>alert('Please provide both mobile number and start date.');</script>");
                 return;
             }
 
             DateTime startDate;
 
-            // Validate if the start date is in correct format
+            
             if (!DateTime.TryParse(startDateText, out startDate))
             {
-                // If the date is invalid, show an error message
+                
                 Response.Write("<script>alert('Invalid date format. Please use the format YYYY-MM-DD.');</script>");
                 return;
             }
 
-            // Call method to display usage data
+            
             DisplayUsageData(mobileNumber, startDate);
         }
 
@@ -48,7 +48,7 @@ namespace Telecommunication_System.AdminPage1
             {
                 using (SqlConnection conn = new SqlConnection(connstr))
                 {
-                    // Use the stored function Account_Usage_Plan with parameters
+                    
                     SqlCommand cmd = new SqlCommand("SELECT * FROM Account_Usage_Plan(@mobile_num, @start_date)", conn);
                     cmd.CommandType = CommandType.Text;
                     cmd.Parameters.AddWithValue("@mobile_num", mobileNumber);
@@ -60,7 +60,7 @@ namespace Telecommunication_System.AdminPage1
                     {
                         tblUsageData.Rows.Clear();
 
-                        // Create header row
+                        
                         TableRow headerRow = new TableRow();
                         for (int i = 0; i < rdr.FieldCount; i++)
                         {
@@ -70,7 +70,7 @@ namespace Telecommunication_System.AdminPage1
                         }
                         tblUsageData.Rows.Add(headerRow);
 
-                        // Add data rows
+                        
                         while (rdr.Read())
                         {
                             TableRow row = new TableRow();
@@ -87,7 +87,7 @@ namespace Telecommunication_System.AdminPage1
             }
             catch (Exception ex)
             {
-                // If any error occurs, show the error
+                
                 Response.Redirect($"ErrorPage.aspx?message={Server.UrlEncode("An error occurred: " + ex.Message)}");
             }
         }
