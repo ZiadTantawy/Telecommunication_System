@@ -33,6 +33,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
+        <asp:Button ID="Logout" runat="server" Text="Logout" Onclick="AdminlogoutRedirect"/>
         <div class="dashboard-container">
             <h1>Admin Dashboard</h1>
             <asp:Button ID="btnCustomerProfiles" runat="server" Text="View All Customer Profiles" CssClass="dashboard-button" OnClick="btnCustomerProfiles_Click" />

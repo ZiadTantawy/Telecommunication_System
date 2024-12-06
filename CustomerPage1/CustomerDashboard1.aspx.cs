@@ -42,5 +42,10 @@ namespace Telecommunication_System.CustomerPage1
         {
             Response.Redirect("../CustomerPage3/CostumerDashboard.aspx"); // Adjust this if the URL or page name is different
         }
+        protected void AdminlogoutRedirect(object sender, EventArgs e)
+        {
+            Response.Redirect("HomePage.aspx");
+            Session.Clear();
+        }
     }
 }

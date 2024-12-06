@@ -34,6 +34,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
+        <asp:Button ID="Logout" runat="server" Text="Logout" Onclick="AdminlogoutRedirect"/>
         <div class="dashboard-container">
             <h1>Customer Dashboard</h1>
             <asp:Button ID="btnAllActiveBenefits" runat="server" Text="View All Active Benefits" CssClass="dashboard-button" OnClick="btnAllActiveBenefits_click" />
