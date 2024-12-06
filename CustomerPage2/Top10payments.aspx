@@ -1,0 +1,18 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Top10payments.aspx.cs" Inherits="Telecommunication_System.CustomerPage2.Top10payments" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Last 5 Months Subscription</title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <h1>Top Payments</h1>
+        <div>
+            <asp:GridView ID="GridViewTopPayments" runat="server" AutoGenerateColumns="true"></asp:GridView>
+            <asp:Label ID="lblMessage" runat="server" Text=""  Visible="false"></asp:Label><br />
+        </div>
+    </form>
+</body>
+</html>
