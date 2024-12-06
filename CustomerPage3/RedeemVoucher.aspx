@@ -15,6 +15,7 @@
             <asp:TextBox ID ="VoucherID" runat="server" PlaceHolder ="Voucher ID"></asp:TextBox>
             <br />
             <asp:Button ID ="btnRedeemVoucher" runat="server" Text ="Redeem Voucher" OnClick ="Redeem" />
+             <asp:Button ID="btnBack" runat="server" Text="Back" OnClick="redirectBack" CssClass="button" />
             <br />
             <asp:Label ID="lblMessage" runat="server"></asp:Label>
         </div>

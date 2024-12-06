@@ -16,6 +16,7 @@ namespace Telecommunication_System.CustomerPage3
         }
         protected void Retrive(object sender, EventArgs e)
         {
+
             string paymentInput = PaymentID.Text;
             string benefitInput = BenefitID.Text;
 
@@ -71,6 +72,10 @@ namespace Telecommunication_System.CustomerPage3
 
 
             }
+        }
+        protected void redirectBack(object sender, EventArgs e)
+        {
+            Response.Redirect("CustomerDashboard2.aspx");
         }
     }
 }

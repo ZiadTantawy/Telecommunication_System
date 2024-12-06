@@ -11,6 +11,7 @@
         <h1>All Shop Details</h1>
        <div>
         <asp:GridView ID="GridViewAllShops" runat="server" AutoGenerateColumns="true"></asp:GridView>
+        <asp:Button ID="btnBack" runat="server" Text="Back" OnClick="redirectBack" CssClass="button" />
         <br />
         <asp:Label ID ="lblMessage" runat ="server"></asp:Label>
     </div>

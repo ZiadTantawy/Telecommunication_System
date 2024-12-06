@@ -42,15 +42,6 @@ namespace Telecommunication_System.CustomerPage1
         protected global::System.Web.UI.WebControls.Button btnSearch;
 
         /// <summary>
-        /// btnBack control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnBack;
-
-        /// <summary>
         /// tblCashback control.
         /// </summary>
         /// <remarks>
@@ -58,5 +49,14 @@ namespace Telecommunication_System.CustomerPage1
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Table tblCashback;
+
+        /// <summary>
+        /// btnBack control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnBack;
     }
 }

@@ -35,11 +35,17 @@ namespace Telecommunication_System.CustomerPage3
                 }
                 catch (Exception ex)
                 {
-                    lblMessage.Text = "An error has occured " + ex.Message; 
+                    lblMessage.Text = "An error has occured " + ex.Message;
                     lblMessage.ForeColor = System.Drawing.Color.Red;
                 }
             }
-
         }
+
+             protected void redirectBack(object sender, EventArgs e)
+             {
+                 Response.Redirect("CustomerDashboard2.aspx");
+             }
+
+    }
     }
 }

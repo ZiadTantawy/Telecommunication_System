@@ -22,6 +22,7 @@
             <asp:RadioButton ID="rbtnCredit" runat="server" GroupName="PaymentMethod" Text="Credit" />
             <br />
             <asp:Button ID="btnRecharge" runat="server" Text ="Recharge Balance" OnClick ="Recharge" />
+             <asp:Button ID="btnBack" runat="server" Text="Back" OnClick="redirectBack" CssClass="button" />
             <br />
             <asp:Label ID ="lblMessage" runat="server"></asp:Label>
         </div>

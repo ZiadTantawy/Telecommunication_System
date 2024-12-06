@@ -45,6 +45,7 @@
                 runat="server" 
                 Text="Renew" 
                 OnClick="Renew" />
+             <asp:Button ID="btnBack" runat="server" Text="Back" OnClick="redirectBack" CssClass="button" />
             <br />
             <asp:Label ID="lblMessage" runat="server"></asp:Label>
         </div>

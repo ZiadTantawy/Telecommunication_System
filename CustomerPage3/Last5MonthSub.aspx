@@ -12,6 +12,7 @@
         <div>
             <asp:Label ID="lblMessage" runat="server" Text="" ForeColor="Red" Visible="false"></asp:Label><br />
             <asp:GridView ID="GridViewServicePlans" runat="server" AutoGenerateColumns="true"></asp:GridView>
+             <asp:Button ID="btnBack" runat="server" Text="Back" OnClick="redirectBack" CssClass="button" />
         </div>
     </form>
 </body>
