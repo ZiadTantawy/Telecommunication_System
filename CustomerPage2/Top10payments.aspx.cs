@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -13,7 +15,7 @@ namespace Telecommunication_System.CustomerPage2
         {
              if (!IsPostBack)
             {
-                checkid();
+             
             }
         }
         protected void checkid(object sender, EventArgs e)
@@ -36,42 +38,51 @@ namespace Telecommunication_System.CustomerPage2
 
             string connStr = System.Configuration.ConfigurationManager.ConnectionStrings["Telecom_Team_104"].ConnectionString;
             string query = "Top_Successful_Payments";
-            DataTable dataTable = new DataTable();
 
-            try
+            using (SqlConnection conn = new SqlConnection(connStr))
             {
-                using (SqlConnection conn = new SqlConnection(connStr))
-                {
-                    
-                    SqlDataAdapter dataAdapter = new SqlDataAdapter(query, conn);
-                    dataAdapter.SelectCommand.CommandType = CommandType.StoredProcedure;
-                    dataAdapter.SelectCommand.Parameters.AddWithValue("@mobile_num", Mobilenumber); 
-                    dataAdapter.Fill(dataTable);
-                }
 
-                if (dataTable.Rows.Count > 0)
+                try
                 {
-                        
-                    GridViewTopPayments.DataSource = dataTable; 
-                    GridViewTopPayments.DataBind();
-                    lblMessage.Visible = false;
-                    GridViewTopPayments.Visible = true;
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@MobileNo",Mobilenumber);
+                        conn.Open();
+
+                        using (SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd))
+                        {
+                            DataTable dataTable = new DataTable();
+                            dataAdapter.Fill(dataTable);
+
+
+
+
+                            if (dataTable.Rows.Count > 0)
+                            {
+
+                                GridViewTopPayments.DataSource = dataTable;
+                                GridViewTopPayments.DataBind();
+                                lblMessage.Visible = false;
+                                GridViewTopPayments.Visible = true;
+                            }
+                            else
+                            {
+                                lblMessage.Text = "No payments found for this mobile number.";
+                                lblMessage.Visible = true;
+                                GridViewTopPayments.Visible = false;
+                            }
+                        }
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    lblMessage.Text = "No payments found for this mobile number.";
-                    lblMessage.Visible = true;  
+                    lblMessage.Text = "An error occurred:" + ex.Message;
+                    lblMessage.Visible = true;
                     GridViewTopPayments.Visible = false;
                 }
             }
-            catch (Exception ex)
-            {
-                lblMessage.Text = "An error occurred:" + ex.Message; 
-                lblMessage.Visible = true;
-                GridViewTopPayments.Visible = false;
-            } 
-         }
-        protected void redirectBack(object sender, EventArgs e)
+        }
+         protected void redirectBack(object sender, EventArgs e)
         {
             Response.Redirect("CustomerDashboard2.aspx");
         }
