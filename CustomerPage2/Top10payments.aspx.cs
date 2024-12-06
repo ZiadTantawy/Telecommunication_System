@@ -47,7 +47,8 @@ namespace Telecommunication_System.CustomerPage2
                 {
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
-                        cmd.Parameters.AddWithValue("@MobileNo",Mobilenumber);
+                        cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@mobile_num",Mobilenumber);
                         conn.Open();
 
                         using (SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd))

@@ -22,7 +22,7 @@ namespace Telecommunication_System.CustomerPage3
         {
             string connStr = System.Configuration.ConfigurationManager.ConnectionStrings["Telecom_Team_104"].ConnectionString;
 
-            string query = "Select * from dbo.Subscribed_plans_5_Months(@MobileNo)";
+            string query = "SELECT * FROM dbo.Subscribed_plans_5_Months(@mobile_num)";
 
             using (SqlConnection conn = new SqlConnection(connStr))
             {
@@ -30,7 +30,7 @@ namespace Telecommunication_System.CustomerPage3
                 {
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
-                        cmd.Parameters.AddWithValue("@MobileNo", Session["MobileNumber"].ToString());
+                        cmd.Parameters.AddWithValue("@mobile_num", Session["MobileNumber"]);
                         conn.Open();
 
                         using (SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd))
