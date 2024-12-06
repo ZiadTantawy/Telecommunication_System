@@ -4,7 +4,33 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>All shops </title>
+    <style>
+    .dashboard-container {
+        text-align: center;
+        margin-top: 50px;
+    }
+    .dashboard-container h1 {
+        font-size: 36px;
+        color: #333;
+    }
+    .dashboard-button {
+        display: block;
+        width: 100%;
+        margin: 15px auto;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: white;
+        background-color: #4CAF50;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        text-align: center;
+    }
+    .dashboard-button:hover {
+        background-color: #45a049;
+    }
+</style>
 </head>
 <body>
     <form id="form1" runat="server">
