@@ -10,6 +10,9 @@
     <form id="form1" runat="server">
         <h1>Top Payments</h1>
         <div>
+            <label for="Mobile number">Mobile Number:</label>
+            <asp:TextBox ID="MobileNumber" runat="server" CssClass="input-field" Placeholder="Enter Mobile Number"></asp:TextBox>
+            <br />
             <asp:GridView ID="GridViewTopPayments" runat="server" AutoGenerateColumns="true"></asp:GridView>
             <asp:Label ID="lblMessage" runat="server" Text=""  Visible="false"></asp:Label><br />
         </div>
