@@ -44,6 +44,7 @@
             <asp:Button ID="btnAccountUsage" runat="server" Text="View Total Account Usage by Plan" CssClass="dashboard-button" OnClick="btnAccountUsage_Click" />
             <asp:Button ID="btnRemoveBenefits" runat="server" Text="Remove All Benefits from Account" CssClass="dashboard-button" OnClick="btnRemoveBenefits_Click" />
             <asp:Button ID="btnSmsOffers" runat="server" Text="View All SMS Offers for Account" CssClass="dashboard-button" OnClick="btnSmsOffers_Click" />
+            <asp:Button ID="Dash2" runat="server" Text="Go to Admin Dashboard 2" onclick="btnDash2"/>
         </div>
     </form>
 </body>

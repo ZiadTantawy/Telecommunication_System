@@ -71,5 +71,9 @@ namespace Telecommunication_System
             Response.Redirect("HomePage.aspx");
             Session.Clear();
         }
+        protected void dash1back(object sender, EventArgs e)
+        {
+            Response.Redirect("../AdminPage1/AdminDashboard1.aspx");
+        }
     }
 }

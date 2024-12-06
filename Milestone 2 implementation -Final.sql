@@ -1016,4 +1016,3 @@ Exec Initiate_balance_payment @mobile_num = '01234567890', @amount =100, @paymen
 
 Exec Redeem_voucher_points @mobile_num = '01234567890', @voucher_id = 3 
 
--- Insert multiple records into customer_profile

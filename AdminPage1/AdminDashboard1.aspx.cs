@@ -55,8 +55,12 @@ namespace Telecommunication_System.AdminPage1
 
         protected void AdminlogoutRedirect(object sender, EventArgs e)
         {
-            Response.Redirect("HomePage.aspx");
+            Response.Redirect("../HomePage.aspx");
             Session.Clear();
+        }
+        protected void btnDash2(object sender, EventArgs e)
+        {
+            Response.Redirect("../AdminPage2/AdminDashboard2.aspx");
         }
     }
 }
