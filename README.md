@@ -6,7 +6,7 @@
 ## Project Overview  
 This project is a web application built as part of the Databases I course. It integrates a SQL Server database with a user-friendly interface to allow admins and customers to perform essential operations.  
 
-The application comprises the following main components:  
+The application consists of the following main components:  
 - **Admin Portal:** Enables administrators to manage customer accounts, transactions, subscriptions, and vouchers.  
 - **Customer Portal:** Provides customers access to their account details, consumption reports, benefits, and more.  
 
