@@ -73,12 +73,7 @@ The application comprises the following main components:
 - Implement both admin and customer components.  
 
 ## Technologies Used  
-- **Frontend:** ASP.NET WebForms / Razor Pages.  
+- **Frontend:** ASP.NET WebForms.  
 - **Backend:** C# with ASP.NET Framework or .NET Core.  
 - **Database:** Microsoft SQL Server.  
 - **Tools:** Visual Studio, SQL Server Management Studio (SSMS).  
-
-## Setup Instructions  
-1. Clone the repository:  
-   ```bash  
-   git clone https://github.com/<your-username>/<repository-name>.git  
