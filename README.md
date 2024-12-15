@@ -1,4 +1,4 @@
-# Database-Integrated Web Application  
+# Telecommunication System  
 **Course:** Databases I - Winter 2024  
 **Instructor:** Dr. Mervat Abuelkheir  
 **Institution:** German University in Cairo - Media Engineering and Technology  
