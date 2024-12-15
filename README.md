@@ -74,6 +74,6 @@ The application comprises the following main components:
 
 ## Technologies Used  
 - **Frontend:** ASP.NET WebForms.  
-- **Backend:** C# with ASP.NET Framework or .NET Core.  
+- **Backend:** C# with ASP.NET Framework.  
 - **Database:** Microsoft SQL Server.  
 - **Tools:** Visual Studio, SQL Server Management Studio (SSMS).  
