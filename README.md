@@ -76,4 +76,4 @@ The application consists of the following main components:
 - **Frontend:** ASP.NET WebForms.  
 - **Backend:** C# with ASP.NET Framework.  
 - **Database:** Microsoft SQL Server.  
-- **Tools:** Visual Studio, SQL Server Management Studio (SSMS).  
+- **Tools:** Visual Studio. 
